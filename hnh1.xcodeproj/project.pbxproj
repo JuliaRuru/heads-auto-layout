@@ -13,6 +13,7 @@
 		A3CD15D927FC7A34007CC36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CD15D727FC7A34007CC36E /* Main.storyboard */; };
 		A3CD15DB27FC7A37007CC36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3CD15DA27FC7A37007CC36E /* Assets.xcassets */; };
 		A3CD15DE27FC7A37007CC36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CD15DC27FC7A37007CC36E /* LaunchScreen.storyboard */; };
+		A3DD9AF32808604A008BDB37 /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD9AF22808604A008BDB37 /* AuthentificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A3CD15DA27FC7A37007CC36E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3CD15DD27FC7A37007CC36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3CD15DF27FC7A37007CC36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DD9AF22808604A008BDB37 /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A3CD15DA27FC7A37007CC36E /* Assets.xcassets */,
 				A3CD15DC27FC7A37007CC36E /* LaunchScreen.storyboard */,
 				A3CD15DF27FC7A37007CC36E /* Info.plist */,
+				A3DD9AF22808604A008BDB37 /* AuthentificationViewController.swift */,
 			);
 			path = hnh1;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3CD15D627FC7A34007CC36E /* ViewController.swift in Sources */,
+				A3DD9AF32808604A008BDB37 /* AuthentificationViewController.swift in Sources */,
 				A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */,
 				A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */,
 			);
