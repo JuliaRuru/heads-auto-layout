@@ -21,7 +21,7 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmTextField: UITextField!
-    @IBOutlet weak var doneButton: MyButton!
+    @IBOutlet weak var doneButton: flickeringButton!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextField {
@@ -39,12 +39,4 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate {
     @objc func endEditing() {
         view.endEditing(true)
     }
-}
-
-class MyButton: UIButton {
-    override open var isHighlighted: Bool {
-            didSet {
-                self.backgroundColor = isHighlighted ? .green : .orange
-            }
-        }
 }

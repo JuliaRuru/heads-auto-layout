@@ -61,7 +61,7 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-0W-Fju" customClass="MyButton" customModule="hnh1" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-0W-Fju" customClass="flickeringButton" customModule="hnh1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="807" width="414" height="51"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -99,7 +99,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="doneButton" destination="lYv-0W-Fju" id="ohv-17-xfu"/>
+                        <outlet property="doneButton" destination="lYv-0W-Fju" id="uAb-6f-4Gb"/>
                         <outlet property="loginTextField" destination="e95-pC-28J" id="ISD-4g-0cm"/>
                         <outlet property="passwordConfirmTextField" destination="5Lv-XD-j08" id="z9x-FK-cJ1"/>
                         <outlet property="passwordTextField" destination="HEn-E7-WJc" id="PnH-nq-lG8"/>
