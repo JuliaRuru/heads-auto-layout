@@ -101,8 +101,8 @@
                     <connections>
                         <outlet property="doneButton" destination="lYv-0W-Fju" id="ohv-17-xfu"/>
                         <outlet property="loginTextField" destination="e95-pC-28J" id="ISD-4g-0cm"/>
+                        <outlet property="passwordConfirmTextField" destination="5Lv-XD-j08" id="z9x-FK-cJ1"/>
                         <outlet property="passwordTextField" destination="HEn-E7-WJc" id="PnH-nq-lG8"/>
-                        <outlet property="passwordTextField2" destination="5Lv-XD-j08" id="pJB-VE-AyV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvE-I1-0LS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

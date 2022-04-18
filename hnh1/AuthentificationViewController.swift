@@ -13,23 +13,22 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer (target: self, action: #selector (endEditing))
         view.addGestureRecognizer(tap)
-        self.loginTextField.becomeFirstResponder()
         loginTextField.delegate = self
         passwordTextField.delegate = self
-        passwordTextField2.delegate = self
+        passwordConfirmTextField.delegate = self
     }
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordTextField2: UITextField!
+    @IBOutlet weak var passwordConfirmTextField: UITextField!
     @IBOutlet weak var doneButton: MyButton!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextField {
-            self.passwordTextField.becomeFirstResponder()
+            passwordTextField.becomeFirstResponder()
         }
         else if textField == passwordTextField {
-            self.passwordTextField2.becomeFirstResponder()
+            passwordConfirmTextField.becomeFirstResponder()
         }
         else {
             textField.resignFirstResponder()
