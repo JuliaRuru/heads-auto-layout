@@ -169,7 +169,7 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaY-3e-eOa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaY-3e-eOa" customClass="flickeringButton" customModule="hnh1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="741" width="414" height="51"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -181,7 +181,7 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-uE-fqb" colorLabel="IBBuiltInLabel-Orange">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-uE-fqb" customClass="flickeringButton" customModule="hnh1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange">
                                 <rect key="frame" x="0.0" y="807" width="414" height="51"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -219,10 +219,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="SaY-3e-eOa" id="uMQ-4a-3fi"/>
+                        <outlet property="enterButton" destination="SaY-3e-eOa" id="BzR-yI-EHW"/>
                         <outlet property="loginTextField" destination="Mzo-97-rco" id="hlU-nw-hi6"/>
                         <outlet property="passwordTextField" destination="hso-37-CmQ" id="0hn-Ve-MkX"/>
-                        <outlet property="registerButton" destination="PZY-uE-fqb" id="l0S-dx-OHO"/>
+                        <outlet property="registrateButton" destination="PZY-uE-fqb" id="LcB-sp-PeW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
