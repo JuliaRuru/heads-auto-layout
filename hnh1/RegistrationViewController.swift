@@ -16,6 +16,15 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         loginTextField.delegate = self
         passwordTextField.delegate = self
         passwordConfirmTextField.delegate = self
+//#Mark: placeholder style
+        let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21.0)]
+                
+        loginTextField.attributedPlaceholder = NSAttributedString(string: "    Введите логин", attributes: attributes)
+                
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "    Введите пароль", attributes: attributes)
+        
+        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "    Повторите пароль", attributes: attributes)
     }
     
     @IBOutlet weak var loginTextField: UITextField!

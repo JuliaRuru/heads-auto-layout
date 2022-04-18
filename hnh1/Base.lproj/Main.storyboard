@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="height" constant="77" id="Vo7-DF-ZsH"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Введите логин" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="e95-pC-28J">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="e95-pC-28J">
                                 <rect key="frame" x="16" y="311" width="382" height="70"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -43,7 +43,7 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Введите пароль" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="HEn-E7-WJc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="HEn-E7-WJc">
                                 <rect key="frame" x="16" y="413" width="382" height="70"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -52,7 +52,7 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Повторите пароль" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="5Lv-XD-j08">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="5Lv-XD-j08">
                                 <rect key="frame" x="16" y="515" width="382" height="70"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
