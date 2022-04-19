@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3917E95280D67A2009168F0 /* flickeringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3917E94280D67A2009168F0 /* flickeringButton.swift */; };
+		A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3917E94280D67A2009168F0 /* FlickeringButton.swift */; };
 		A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D127FC7A34007CC36E /* AppDelegate.swift */; };
 		A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */; };
 		A3CD15D627FC7A34007CC36E /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A3917E94280D67A2009168F0 /* flickeringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flickeringButton.swift; sourceTree = "<group>"; };
+		A3917E94280D67A2009168F0 /* FlickeringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringButton.swift; sourceTree = "<group>"; };
 		A3CD15CE27FC7A34007CC36E /* hnh1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hnh1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CD15D127FC7A34007CC36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		A3CD15C527FC7A34007CC36E = {
 			isa = PBXGroup;
 			children = (
-				A3917E94280D67A2009168F0 /* flickeringButton.swift */,
+				A3917E94280D67A2009168F0 /* FlickeringButton.swift */,
 				A3CD15D027FC7A34007CC36E /* hnh1 */,
 				A3CD15CF27FC7A34007CC36E /* Products */,
 			);
@@ -145,7 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3CD15D627FC7A34007CC36E /* AuthentificationViewController.swift in Sources */,
-				A3917E95280D67A2009168F0 /* flickeringButton.swift in Sources */,
+				A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */,
 				A3DD9AF32808604A008BDB37 /* RegistrationViewController.swift in Sources */,
 				A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */,
 				A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */,

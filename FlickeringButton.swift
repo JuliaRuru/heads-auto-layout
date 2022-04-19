@@ -7,7 +7,7 @@
 
 import UIKit
 
-class flickeringButton: UIButton {
+class FlickeringButton: UIButton {
     override open var isHighlighted: Bool {
         didSet {
             self.backgroundColor = isHighlighted ? .green : .orange

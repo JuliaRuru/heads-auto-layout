@@ -33,7 +33,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmTextField: UITextField!
-    @IBOutlet weak var doneButton: flickeringButton!
+    @IBOutlet weak var doneButton: FlickeringButton!
     @IBOutlet weak var registrationScrollView: UIScrollView!
     
 //#Mark: return key for keyboard

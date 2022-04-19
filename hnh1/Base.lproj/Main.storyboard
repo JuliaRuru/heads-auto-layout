@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dZC-gO-MJN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -23,7 +23,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHi-mI-QgO">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-0W-Fju" customClass="flickeringButton" customModule="hnh1" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-0W-Fju" customClass="FlickeringButton" customModule="hnh1" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="807" width="414" height="51"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <constraints>
@@ -144,108 +144,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mde-Ew-HoQ">
-                                <rect key="frame" x="16" y="135" width="222" height="42"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9B3-4P-2VY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BS-IX-E4s">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-ZN-ULQ">
+                                                <rect key="frame" x="8" y="135" width="398" height="723"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mde-Ew-HoQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="42"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="EVo-Ug-8SR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Авторизуйтесь, чтобы получить доступ к полному функционалу приложения" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-Pu-ehb">
+                                                        <rect key="frame" x="0.0" y="115.66666666666666" width="398" height="81"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="81" id="MNC-b6-N6p"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="23"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzo-97-rco">
+                                                        <rect key="frame" x="0.0" y="256.66666666666669" width="398" height="70"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="MKt-xj-vhc"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hso-37-CmQ">
+                                                        <rect key="frame" x="0.0" y="392" width="398" height="70"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="97v-IO-9J1"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaY-3e-eOa" customClass="FlickeringButton" customModule="hnh1" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="536.66666666666663" width="398" height="51"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="51" id="WUD-4A-bsk"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-uE-fqb" customClass="FlickeringButton" customModule="hnh1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange">
+                                                        <rect key="frame" x="0.0" y="672" width="398" height="51"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="51" id="WUn-3S-fKx"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
+                                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="kTW-ZN-ULQ" firstAttribute="bottom" secondItem="1BS-IX-E4s" secondAttribute="bottom" constant="-38" id="6qq-zT-IRI"/>
+                                            <constraint firstItem="kTW-ZN-ULQ" firstAttribute="leading" secondItem="1BS-IX-E4s" secondAttribute="leadingMargin" id="C9s-dI-oXh"/>
+                                            <constraint firstItem="kTW-ZN-ULQ" firstAttribute="top" secondItem="1BS-IX-E4s" secondAttribute="top" constant="135" id="Pdu-pw-UGy"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="kTW-ZN-ULQ" secondAttribute="trailing" id="rgE-Ig-MBw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="EVo-Ug-8SR"/>
+                                    <constraint firstItem="1BS-IX-E4s" firstAttribute="width" secondItem="56Y-ho-MKV" secondAttribute="width" id="SMP-Nc-fzP"/>
+                                    <constraint firstItem="1BS-IX-E4s" firstAttribute="trailing" secondItem="nCp-KZ-KHp" secondAttribute="trailing" id="X3f-PO-PuD"/>
+                                    <constraint firstItem="1BS-IX-E4s" firstAttribute="top" secondItem="nCp-KZ-KHp" secondAttribute="top" id="Xlt-Xv-6wD"/>
+                                    <constraint firstItem="1BS-IX-E4s" firstAttribute="leading" secondItem="nCp-KZ-KHp" secondAttribute="leading" id="iKj-fU-dQx"/>
+                                    <constraint firstItem="1BS-IX-E4s" firstAttribute="height" secondItem="56Y-ho-MKV" secondAttribute="height" id="ozT-96-VHf"/>
+                                    <constraint firstItem="1BS-IX-E4s" firstAttribute="bottom" secondItem="nCp-KZ-KHp" secondAttribute="bottom" id="qbR-2e-Hbk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизуйтесь, чтобы получить доступ к полному функционалу приложения" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-Pu-ehb">
-                                <rect key="frame" x="16" y="203" width="382" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="MNC-b6-N6p"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzo-97-rco">
-                                <rect key="frame" x="16" y="360" width="382" height="70"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="MKt-xj-vhc"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Login">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="23"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="24" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hso-37-CmQ">
-                                <rect key="frame" x="16" y="448" width="382" height="70"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="97v-IO-9J1"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Password">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="23"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="24" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaY-3e-eOa" customClass="flickeringButton" customModule="hnh1" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="741" width="414" height="51"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="WUD-4A-bsk"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Войти">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-uE-fqb" customClass="flickeringButton" customModule="hnh1" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange">
-                                <rect key="frame" x="0.0" y="807" width="414" height="51"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="WUn-3S-fKx"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                </buttonConfiguration>
-                            </button>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nCp-KZ-KHp"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="56Y-ho-MKV"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pjl-Pu-ehb" firstAttribute="top" secondItem="mde-Ew-HoQ" secondAttribute="bottom" constant="26" id="4JN-7K-UMY"/>
-                            <constraint firstItem="PZY-uE-fqb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4MG-em-kLe"/>
-                            <constraint firstAttribute="trailing" secondItem="Pjl-Pu-ehb" secondAttribute="trailing" constant="16" id="9FD-P1-dTH"/>
-                            <constraint firstItem="hso-37-CmQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HTp-Oq-a2n"/>
-                            <constraint firstAttribute="bottom" secondItem="PZY-uE-fqb" secondAttribute="bottom" constant="38" id="Jif-a0-i9r"/>
-                            <constraint firstItem="Mzo-97-rco" firstAttribute="top" secondItem="Pjl-Pu-ehb" secondAttribute="bottom" constant="76" id="K9z-qC-fd6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mzo-97-rco" secondAttribute="trailing" constant="16" id="KEG-Rm-Njn"/>
-                            <constraint firstItem="PZY-uE-fqb" firstAttribute="top" secondItem="SaY-3e-eOa" secondAttribute="bottom" constant="15" id="Qru-JE-lUg"/>
-                            <constraint firstItem="Pjl-Pu-ehb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="VsP-r5-kMR"/>
-                            <constraint firstItem="Mzo-97-rco" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZuU-Wd-OTJ"/>
-                            <constraint firstItem="hso-37-CmQ" firstAttribute="top" secondItem="Mzo-97-rco" secondAttribute="bottom" constant="18" id="dC9-IM-y31"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hso-37-CmQ" secondAttribute="trailing" constant="16" id="dLY-Oo-yRa"/>
-                            <constraint firstItem="mde-Ew-HoQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" priority="999" constant="135" id="kQk-E8-heA"/>
-                            <constraint firstItem="SaY-3e-eOa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lK1-hc-6oo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mde-Ew-HoQ" secondAttribute="trailing" constant="176" id="rCJ-Bh-ey4"/>
-                            <constraint firstItem="mde-Ew-HoQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wxJ-8I-uDy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PZY-uE-fqb" secondAttribute="trailing" id="yU4-id-rQd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SaY-3e-eOa" secondAttribute="trailing" id="yyG-ur-hWt"/>
-                            <constraint firstItem="SaY-3e-eOa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hso-37-CmQ" secondAttribute="bottom" constant="40" id="zb5-hU-MMN"/>
+                            <constraint firstItem="9B3-4P-2VY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lIN-oi-hiT"/>
+                            <constraint firstAttribute="bottom" secondItem="9B3-4P-2VY" secondAttribute="bottom" id="nc0-Lv-SRU"/>
+                            <constraint firstItem="9B3-4P-2VY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vFK-Hy-Ihx"/>
+                            <constraint firstItem="9B3-4P-2VY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="wCU-UX-Tgv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="authScrollView" destination="9B3-4P-2VY" id="hhT-4b-Gmk"/>
+                        <outlet property="authStackView" destination="kTW-ZN-ULQ" id="03L-lo-I0Z"/>
                         <outlet property="enterButton" destination="SaY-3e-eOa" id="BzR-yI-EHW"/>
                         <outlet property="loginTextField" destination="Mzo-97-rco" id="hlU-nw-hi6"/>
                         <outlet property="passwordTextField" destination="hso-37-CmQ" id="0hn-Ve-MkX"/>
