@@ -11,8 +11,8 @@ class AuthentificationViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var registrateButton: flickeringButton!
-    @IBOutlet weak var enterButton: flickeringButton!
+    @IBOutlet weak var registrateButton: FlickeringButton!
+    @IBOutlet weak var enterButton: FlickeringButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

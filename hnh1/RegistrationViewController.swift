@@ -16,21 +16,24 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         loginTextField.delegate = self
         passwordTextField.delegate = self
         passwordConfirmTextField.delegate = self
-//#Mark: placeholder style
+        
         let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21.0)]
                 
-        loginTextField.attributedPlaceholder = NSAttributedString(string: "    Введите логин", attributes: attributes)
+        loginTextField.attributedPlaceholder = NSAttributedString(string: "Введите логин", attributes: attributes)
+        leftStep(loginTextField)
                 
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "    Введите пароль", attributes: attributes)
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Введите пароль", attributes: attributes)
+        leftStep(passwordTextField)
         
-        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "    Повторите пароль", attributes: attributes)
+        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "Повторите пароль", attributes: attributes)
+        leftStep(passwordConfirmTextField)
     }
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmTextField: UITextField!
-    @IBOutlet weak var doneButton: flickeringButton!
+    @IBOutlet weak var doneButton: FlickeringButton!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextField {
@@ -47,5 +50,10 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
     @objc func endEditing() {
         view.endEditing(true)
+    }
+    
+    func leftStep(_ textField: UITextField) {
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
+        textField.leftViewMode = .always
     }
 }
