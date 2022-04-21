@@ -19,7 +19,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         passwordConfirmTextField.delegate = self
         registrationScrollView.delegate = self
         
-//#Mark: placeholder style
         let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21.0)]
                 
@@ -36,7 +35,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     @IBOutlet weak var doneButton: FlickeringButton!
     @IBOutlet weak var registrationScrollView: UIScrollView!
     
-//#Mark: return key for keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextField {
             passwordTextField.becomeFirstResponder()
@@ -50,12 +48,10 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         return true
     }
     
-//#Mark: for hiding keyboard with tap
     @objc func endEditing() {
         view.endEditing(true)
     }
     
-//#Mark: tracking a keyboard for scroll
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear (animated)
         NotificationCenter.default.addObserver(self,
@@ -72,7 +68,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         NotificationCenter.default.removeObserver(self)
     }
     
-//#Mark: changing the placement of a scrollview for scroll
     @objc func keybrdDiDHide() {
         registrationScrollView.contentInset = .zero
     }
@@ -87,4 +82,5 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         let keybrdHeight = keybrdRectangle.height
         registrationScrollView.contentInset = .init(top: 0, left: 0, bottom: keybrdHeight, right: 0)
     }
+
 }
