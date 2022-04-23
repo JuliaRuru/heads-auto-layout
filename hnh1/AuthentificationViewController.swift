@@ -29,12 +29,19 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21.0)]
                         
-        loginTextField.attributedPlaceholder = NSAttributedString(string: "    Login", attributes: attributes)
+        loginTextField.attributedPlaceholder = NSAttributedString(string: "Login", attributes: attributes)
+        leftStep(loginTextField)
                         
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "    Password", attributes: attributes)
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: attributes)
+        leftStep(passwordTextField)
         
         authStackView.setCustomSpacing(26, after: authLabel)
         authStackView.setCustomSpacing(76, after: authTextLabel)
+    }
+    
+    func leftStep(_ textField: UITextField) {
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
+        textField.leftViewMode = .always
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -91,30 +98,14 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
         return
         }
         
-        let keybrdRectangle = keybrdFrame.cgRectValue
-        let keybrdHeight = keybrdRectangle.height
-        let contentSize = UIScreen.main.bounds
-        let contentHeight = contentSize.size.height
-//        let textFieldFrame = activeField.convert(activeField.frame, from: authScrollView).minY
-        let center = (contentHeight - keybrdHeight)/2
-        let textFieldFrame = activeField.frame.origin.y
-
+        let keybrdHeight = keybrdFrame.cgRectValue.height
+        let activeFieldFrame = activeField.frame.origin.y
+ 
         authScrollView.contentInset = .init(top: 0, left: 0, bottom: keybrdHeight, right: 0)
         
-        print("scrollView offset =", authScrollView.contentOffset)
-        print("contentHeight", contentHeight)
-        print("textFieldFrame", textFieldFrame)
-        
-        if textFieldFrame > center {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.authScrollView.frame.origin.y = (textFieldFrame - center)
-            })
-        }
-        else if textFieldFrame < center {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.authScrollView.frame.origin.y = (center - textFieldFrame)
-            })
-        }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.authScrollView.contentOffset = CGPoint(x: 0, y:  activeFieldFrame/2)
+        })
     }
     
     var activeField: UITextField?

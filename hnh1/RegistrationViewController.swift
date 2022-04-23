@@ -22,11 +22,14 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21.0)]
                 
-        loginTextField.attributedPlaceholder = NSAttributedString(string: "    Введите логин", attributes: attributes)
+        loginTextField.attributedPlaceholder = NSAttributedString(string: "Введите логин", attributes: attributes)
+        leftStep(loginTextField)
                 
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "    Введите пароль", attributes: attributes)
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Введите пароль", attributes: attributes)
+        leftStep(passwordTextField)
         
-        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "    Повторите пароль", attributes: attributes)
+        passwordConfirmTextField.attributedPlaceholder = NSAttributedString(string: "Повторите пароль", attributes: attributes)
+        leftStep(passwordConfirmTextField)
     }
     
     @IBOutlet weak var loginTextField: UITextField!
@@ -50,6 +53,11 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     
     @objc func endEditing() {
         view.endEditing(true)
+    }
+    
+    func leftStep(_ textField: UITextField) {
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
+        textField.leftViewMode = .always
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,10 +85,26 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         else {
         return
         }
-            
-        let keybrdRectangle = keybrdFrame.cgRectValue
-        let keybrdHeight = keybrdRectangle.height
+        guard let activeField = activeField
+        else {
+        return
+        }
+        
+        let keybrdHeight = keybrdFrame.cgRectValue.height
+        let activeFieldFrame = activeField.frame.origin.y
         registrationScrollView.contentInset = .init(top: 0, left: 0, bottom: keybrdHeight, right: 0)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.registrationScrollView.contentOffset = CGPoint(x: 0, y:  activeFieldFrame/2)
+        })
+    }
+    var activeField: UITextField?
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+            activeField = textField
     }
 
+    func textFieldDidEndEditing(_ textField: UITextField) {
+            activeField = nil
+    }
 }

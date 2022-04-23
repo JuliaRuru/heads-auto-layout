@@ -220,6 +220,7 @@
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="kTW-ZN-ULQ" firstAttribute="leading" secondItem="1BS-IX-E4s" secondAttribute="leadingMargin" constant="16" id="C9s-dI-oXh"/>
+                                            <constraint firstItem="SaY-3e-eOa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kTW-ZN-ULQ" secondAttribute="bottom" constant="50" id="CMZ-hb-tM0"/>
                                             <constraint firstItem="SaY-3e-eOa" firstAttribute="leading" secondItem="1BS-IX-E4s" secondAttribute="leading" id="Not-D1-14e"/>
                                             <constraint firstItem="kTW-ZN-ULQ" firstAttribute="top" secondItem="1BS-IX-E4s" secondAttribute="top" constant="135" id="Pdu-pw-UGy"/>
                                             <constraint firstItem="PZY-uE-fqb" firstAttribute="leading" secondItem="1BS-IX-E4s" secondAttribute="leading" id="anm-Dd-9L7"/>
