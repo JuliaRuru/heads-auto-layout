@@ -56,18 +56,16 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
         
     @objc func endEditing() {
         view.endEditing(true)
-        self.view.frame.origin.y = 0.0
-
     }
         
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear (animated)
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector (keybrdDidChange),
+                                               selector: #selector (keyboardWillChange),
                                                name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector (keybrdDiDHide),
+                                               selector: #selector (keyboardWillHide),
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
@@ -77,23 +75,18 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
         NotificationCenter.default.removeObserver(self)
     }
         
-    @objc func keybrdDiDHide() {
+    @objc func keyboardWillHide() {
         authScrollView.contentInset = .zero
     }
     
-    @objc func keybrdDidChange(sender: Notification) {
-        guard let timeAnimation: NSValue = sender.userInfo? [UIResponder.keyboardAnimationDurationUserInfoKey] as? NSValue
-        else {
-        return
+    @objc func keyboardWillChange(sender: Notification) {
+        if let timeAnimation: NSValue = sender.userInfo? [UIResponder.keyboardAnimationDurationUserInfoKey] as? NSValue { print("Animation time of keyboard =", timeAnimation)
+        } else {
+            return
         }
-        print("Animation time of keyboard =", timeAnimation)
 
-        guard let keybrdFrame: NSValue = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
-        else {
-        return
-        }
-        
-        guard let activeField = activeField
+        guard let keybrdFrame: NSValue = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+              let activeField = activeField
         else {
         return
         }
