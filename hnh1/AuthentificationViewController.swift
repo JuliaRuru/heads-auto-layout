@@ -81,8 +81,6 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
     
     @objc func keyboardWillChange(sender: Notification) {
         if let timeAnimation: NSValue = sender.userInfo? [UIResponder.keyboardAnimationDurationUserInfoKey] as? NSValue { print("Animation time of keyboard =", timeAnimation)
-        } else {
-            return
         }
 
         guard let keybrdFrame: NSValue = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
