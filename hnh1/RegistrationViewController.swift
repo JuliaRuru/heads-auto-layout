@@ -20,6 +20,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         registrationScrollView.delegate = self
         
         let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
+        
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21.0)]
                 
         loginTextField.attributedPlaceholder = NSAttributedString(string: "Введите логин", attributes: attributes)

@@ -15,6 +15,8 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var authStackView: UIStackView!
     @IBOutlet weak var authScrollView: UIScrollView!
+    @IBOutlet weak var registrateButton: FlickeringButton!
+    @IBOutlet weak var enterButton: FlickeringButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
