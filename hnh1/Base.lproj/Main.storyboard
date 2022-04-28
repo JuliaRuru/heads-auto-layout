@@ -117,7 +117,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F91-Gj-pEY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="sZn-3B-tgQ" firstAttribute="top" secondItem="LiX-K7-uCY" secondAttribute="top" id="VFI-PE-jy8"/>
                             <constraint firstItem="sZn-3B-tgQ" firstAttribute="leading" secondItem="LiX-K7-uCY" secondAttribute="leading" id="gD7-vS-IPo"/>
