@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A309BDC5281AA35E0076BC31 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309BDC4281AA35E0076BC31 /* ProfileViewController.swift */; };
+		A309BDD6281EE0940076BC31 /* RegistrationDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309BDD4281EE0940076BC31 /* RegistrationDateTableViewCell.swift */; };
+		A309BDD7281EE0940076BC31 /* RegistrationDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A309BDD5281EE0940076BC31 /* RegistrationDateTableViewCell.xib */; };
+		A309BDDD281EE71B0076BC31 /* UITableViewCell+NibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309BDDC281EE71B0076BC31 /* UITableViewCell+NibName.swift */; };
+		A309BDDF281EE7D80076BC31 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309BDDE281EE7D80076BC31 /* NSObject+ClassName.swift */; };
+		A309BDE2281EEA800076BC31 /* ProfileColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309BDE0281EEA800076BC31 /* ProfileColorTableViewCell.swift */; };
+		A309BDE3281EEA800076BC31 /* ProfileColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */; };
+		A309BDE6281EEB000076BC31 /* UserPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */; };
+		A309BDE7281EEB000076BC31 /* UserPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */; };
 		A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3917E94280D67A2009168F0 /* FlickeringButton.swift */; };
 		A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D127FC7A34007CC36E /* AppDelegate.swift */; };
 		A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */; };
@@ -18,6 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A309BDC4281AA35E0076BC31 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A309BDD4281EE0940076BC31 /* RegistrationDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDateTableViewCell.swift; sourceTree = "<group>"; };
+		A309BDD5281EE0940076BC31 /* RegistrationDateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationDateTableViewCell.xib; sourceTree = "<group>"; };
+		A309BDDC281EE71B0076BC31 /* UITableViewCell+NibName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+NibName.swift"; sourceTree = "<group>"; };
+		A309BDDE281EE7D80076BC31 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		A309BDE0281EEA800076BC31 /* ProfileColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileColorTableViewCell.swift; sourceTree = "<group>"; };
+		A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileColorTableViewCell.xib; sourceTree = "<group>"; };
+		A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPhotoTableViewCell.xib; sourceTree = "<group>"; };
 		A3917E94280D67A2009168F0 /* FlickeringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringButton.swift; sourceTree = "<group>"; };
 		A3CD15CE27FC7A34007CC36E /* hnh1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hnh1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CD15D127FC7A34007CC36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,11 +82,20 @@
 				A3CD15D127FC7A34007CC36E /* AppDelegate.swift */,
 				A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */,
 				A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */,
+				A3DD9AF22808604A008BDB37 /* RegistrationViewController.swift */,
+				A309BDC4281AA35E0076BC31 /* ProfileViewController.swift */,
 				A3CD15D727FC7A34007CC36E /* Main.storyboard */,
 				A3CD15DA27FC7A37007CC36E /* Assets.xcassets */,
 				A3CD15DC27FC7A37007CC36E /* LaunchScreen.storyboard */,
 				A3CD15DF27FC7A37007CC36E /* Info.plist */,
-				A3DD9AF22808604A008BDB37 /* RegistrationViewController.swift */,
+				A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */,
+				A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */,
+				A309BDD4281EE0940076BC31 /* RegistrationDateTableViewCell.swift */,
+				A309BDD5281EE0940076BC31 /* RegistrationDateTableViewCell.xib */,
+				A309BDE0281EEA800076BC31 /* ProfileColorTableViewCell.swift */,
+				A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */,
+				A309BDDC281EE71B0076BC31 /* UITableViewCell+NibName.swift */,
+				A309BDDE281EE7D80076BC31 /* NSObject+ClassName.swift */,
 			);
 			path = hnh1;
 			sourceTree = "<group>";
@@ -131,9 +158,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A309BDE3281EEA800076BC31 /* ProfileColorTableViewCell.xib in Resources */,
 				A3CD15DE27FC7A37007CC36E /* LaunchScreen.storyboard in Resources */,
 				A3CD15DB27FC7A37007CC36E /* Assets.xcassets in Resources */,
+				A309BDE7281EEB000076BC31 /* UserPhotoTableViewCell.xib in Resources */,
 				A3CD15D927FC7A34007CC36E /* Main.storyboard in Resources */,
+				A309BDD7281EE0940076BC31 /* RegistrationDateTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,10 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A309BDC5281AA35E0076BC31 /* ProfileViewController.swift in Sources */,
+				A309BDD6281EE0940076BC31 /* RegistrationDateTableViewCell.swift in Sources */,
 				A3CD15D627FC7A34007CC36E /* AuthentificationViewController.swift in Sources */,
 				A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */,
 				A3DD9AF32808604A008BDB37 /* RegistrationViewController.swift in Sources */,
+				A309BDE2281EEA800076BC31 /* ProfileColorTableViewCell.swift in Sources */,
 				A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */,
+				A309BDDD281EE71B0076BC31 /* UITableViewCell+NibName.swift in Sources */,
+				A309BDDF281EE7D80076BC31 /* NSObject+ClassName.swift in Sources */,
+				A309BDE6281EEB000076BC31 /* UserPhotoTableViewCell.swift in Sources */,
 				A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
