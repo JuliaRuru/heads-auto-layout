@@ -47,21 +47,25 @@ extension ProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0,
-           let cell = tableView.dequeueReusableCell(withIdentifier: UserPhotoTableViewCell.className) as? UserPhotoTableViewCell {
-            cell.separatorInset = UIEdgeInsets(top: 0, left: cell.bounds.size.width, bottom: 0, right: 0)
-            return cell
+        switch indexPath.row {
+        case 0:
+            guard let cell = (tableView.dequeueReusableCell(withIdentifier: UserPhotoTableViewCell.className) as? UserPhotoTableViewCell) else {
+                return UITableViewCell()
             }
-        if indexPath.row == 1,
-           let cell = tableView.dequeueReusableCell(withIdentifier: RegistrationDateTableViewCell.className) as? RegistrationDateTableViewCell {
-            return cell
-            }
-        if indexPath.row == 2,
-           let cell = tableView.dequeueReusableCell(withIdentifier: ProfileColorTableViewCell.className) as? ProfileColorTableViewCell {
                 return cell
+        case 1:
+            guard let cell = (tableView.dequeueReusableCell(withIdentifier: RegistrationDateTableViewCell.className) as? RegistrationDateTableViewCell) else {
+                return UITableViewCell()
             }
-            return UITableViewCell()
+                return cell
+        case 2:
+            guard let cell = (tableView.dequeueReusableCell(withIdentifier: ProfileColorTableViewCell.className) as? ProfileColorTableViewCell) else {
+                return UITableViewCell()
+            }
+                return cell
+        default: break
+        }
+        return UITableViewCell()
     }
-
 }
 
