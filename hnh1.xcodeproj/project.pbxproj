@@ -62,7 +62,6 @@
 		A3CD15C527FC7A34007CC36E = {
 			isa = PBXGroup;
 			children = (
-				A3917E94280D67A2009168F0 /* FlickeringButton.swift */,
 				A3CD15D027FC7A34007CC36E /* hnh1 */,
 				A3CD15CF27FC7A34007CC36E /* Products */,
 			);
@@ -79,6 +78,7 @@
 		A3CD15D027FC7A34007CC36E /* hnh1 */ = {
 			isa = PBXGroup;
 			children = (
+				A3917E94280D67A2009168F0 /* FlickeringButton.swift */,
 				A3CD15D127FC7A34007CC36E /* AppDelegate.swift */,
 				A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */,
 				A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */,

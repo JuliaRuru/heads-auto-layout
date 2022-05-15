@@ -15,10 +15,8 @@ class UserPhotoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        circlePhotoImageView.image = UIImage(named: "square.jpg")
         circlePhotoImageView.layer.cornerRadius = circlePhotoImageView.frame.height / 2
         circlePhotoImageView.layer.borderWidth = 5
         circlePhotoImageView.layer.borderColor = UIColor.white.cgColor
-        profilePhotoImageView.image = UIImage(named: "rectangle.jpg")
     }
 }

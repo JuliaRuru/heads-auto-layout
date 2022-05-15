@@ -32,9 +32,15 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        var height = 58
+      
+        enum value: Int {
+            case standart = 58
+            case special = 423
+        }
+        
+        var height = value.standart.rawValue
         if indexPath.row == 0 {
-            height = 423
+            height = value.special.rawValue
         }
         return CGFloat(height)
     }
@@ -68,4 +74,3 @@ extension ProfileViewController: UITableViewDataSource {
         return UITableViewCell()
     }
 }
-

@@ -23,8 +23,8 @@
                             <constraint firstAttribute="height" constant="207" id="rm0-Bg-cJN"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpt-bf-4EL">
-                        <rect key="frame" x="130.5" y="103" width="175" height="175"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vpt-bf-4EL">
+                        <rect key="frame" x="128.5" y="104.5" width="177" height="175"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="175" id="AdS-1J-uBG"/>
                             <constraint firstAttribute="height" constant="175" id="Wye-cD-doe"/>
@@ -61,4 +61,7 @@
             <point key="canvasLocation" x="220.28985507246378" y="257.47767857142856"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
+    </resources>
 </document>
