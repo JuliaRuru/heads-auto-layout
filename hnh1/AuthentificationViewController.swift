@@ -16,6 +16,20 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
     @IBOutlet weak var authStackView: UIStackView!
     @IBOutlet weak var authScrollView: UIScrollView!
     
+    @IBAction func enterButtonClick(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        tabBarController.modalPresentationStyle = .fullScreen
+        show(tabBarController, sender: self)
+    }
+
+    @IBAction func registerButtonClick(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let registrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
+        registrationViewController.modalPresentationStyle = .fullScreen
+        show(registrationViewController, sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

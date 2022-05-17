@@ -38,6 +38,13 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     @IBOutlet weak var doneButton: FlickeringButton!
     @IBOutlet weak var registrationScrollView: UIScrollView!
     
+    @IBAction func doneButtonClick(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        tabBarController.modalPresentationStyle = .fullScreen
+        show(tabBarController, sender: self)
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextField {
             passwordTextField.becomeFirstResponder()

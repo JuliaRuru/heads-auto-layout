@@ -16,6 +16,7 @@
 		A309BDE3281EEA800076BC31 /* ProfileColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */; };
 		A309BDE6281EEB000076BC31 /* UserPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */; };
 		A309BDE7281EEB000076BC31 /* UserPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */; };
+		A32DB5E12832BC7A00DDBD76 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB5E02832BC7A00DDBD76 /* TabBarController.swift */; };
 		A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3917E94280D67A2009168F0 /* FlickeringButton.swift */; };
 		A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D127FC7A34007CC36E /* AppDelegate.swift */; };
 		A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 		A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileColorTableViewCell.xib; sourceTree = "<group>"; };
 		A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		A32DB5E02832BC7A00DDBD76 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A3917E94280D67A2009168F0 /* FlickeringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringButton.swift; sourceTree = "<group>"; };
 		A3CD15CE27FC7A34007CC36E /* hnh1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hnh1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CD15D127FC7A34007CC36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +61,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32DB5E32832D18900DDBD76 /* profileCells */ = {
+			isa = PBXGroup;
+			children = (
+				A309BDDE281EE7D80076BC31 /* NSObject+ClassName.swift */,
+				A309BDDC281EE71B0076BC31 /* UITableViewCell+NibName.swift */,
+				A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */,
+				A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */,
+				A309BDD5281EE0940076BC31 /* RegistrationDateTableViewCell.xib */,
+				A309BDD4281EE0940076BC31 /* RegistrationDateTableViewCell.swift */,
+				A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */,
+				A309BDE0281EEA800076BC31 /* ProfileColorTableViewCell.swift */,
+			);
+			path = profileCells;
+			sourceTree = "<group>";
+		};
 		A3CD15C527FC7A34007CC36E = {
 			isa = PBXGroup;
 			children = (
+				A32DB5E32832D18900DDBD76 /* profileCells */,
 				A3CD15D027FC7A34007CC36E /* hnh1 */,
 				A3CD15CF27FC7A34007CC36E /* Products */,
 			);
@@ -88,14 +106,7 @@
 				A3CD15DA27FC7A37007CC36E /* Assets.xcassets */,
 				A3CD15DC27FC7A37007CC36E /* LaunchScreen.storyboard */,
 				A3CD15DF27FC7A37007CC36E /* Info.plist */,
-				A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */,
-				A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */,
-				A309BDD4281EE0940076BC31 /* RegistrationDateTableViewCell.swift */,
-				A309BDD5281EE0940076BC31 /* RegistrationDateTableViewCell.xib */,
-				A309BDE0281EEA800076BC31 /* ProfileColorTableViewCell.swift */,
-				A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */,
-				A309BDDC281EE71B0076BC31 /* UITableViewCell+NibName.swift */,
-				A309BDDE281EE7D80076BC31 /* NSObject+ClassName.swift */,
+				A32DB5E02832BC7A00DDBD76 /* TabBarController.swift */,
 			);
 			path = hnh1;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 				A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */,
 				A3DD9AF32808604A008BDB37 /* RegistrationViewController.swift in Sources */,
 				A309BDE2281EEA800076BC31 /* ProfileColorTableViewCell.swift in Sources */,
+				A32DB5E12832BC7A00DDBD76 /* TabBarController.swift in Sources */,
 				A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */,
 				A309BDDD281EE71B0076BC31 /* UITableViewCell+NibName.swift in Sources */,
 				A309BDDF281EE7D80076BC31 /* NSObject+ClassName.swift in Sources */,
