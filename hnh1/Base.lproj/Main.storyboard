@@ -165,7 +165,7 @@
                 <navigationController storyboardIdentifier="NavigationControllerProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nSZ-ka-3Vd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wow-Z4-rcg"/>
                     <navigationItem key="navigationItem" id="KhY-ge-neT"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tRR-Q3-C25">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tRR-Q3-C25">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
