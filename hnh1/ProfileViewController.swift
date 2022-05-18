@@ -11,6 +11,11 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileTableView: UITableView!
     
+    enum ConstantHeightOfCell: Int {
+        case standart = 58
+        case special = 423
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileTableView.delegate = self
@@ -28,11 +33,6 @@ class ProfileViewController: UIViewController {
         
         self.profileTableView.separatorColor = .black
     }
-}
-
-enum ConstantHeightOfCell: Int {
-    case standart = 58
-    case special = 423
 }
 
 extension ProfileViewController: UITableViewDelegate {
