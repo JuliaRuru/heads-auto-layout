@@ -17,7 +17,6 @@
 		A309BDE6281EEB000076BC31 /* UserPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */; };
 		A309BDE7281EEB000076BC31 /* UserPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */; };
 		A32DB5E12832BC7A00DDBD76 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB5E02832BC7A00DDBD76 /* TabBarController.swift */; };
-		A32DB5EB2833F8A100DDBD76 /* HeighCellsOfProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB5EA2833F8A100DDBD76 /* HeighCellsOfProfile.swift */; };
 		A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3917E94280D67A2009168F0 /* FlickeringButton.swift */; };
 		A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D127FC7A34007CC36E /* AppDelegate.swift */; };
 		A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */; };
@@ -39,7 +38,6 @@
 		A309BDE4281EEB000076BC31 /* UserPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		A309BDE5281EEB000076BC31 /* UserPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPhotoTableViewCell.xib; sourceTree = "<group>"; };
 		A32DB5E02832BC7A00DDBD76 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		A32DB5EA2833F8A100DDBD76 /* HeighCellsOfProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeighCellsOfProfile.swift; sourceTree = "<group>"; };
 		A3917E94280D67A2009168F0 /* FlickeringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringButton.swift; sourceTree = "<group>"; };
 		A3CD15CE27FC7A34007CC36E /* hnh1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hnh1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CD15D127FC7A34007CC36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				A309BDD4281EE0940076BC31 /* RegistrationDateTableViewCell.swift */,
 				A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */,
 				A309BDE0281EEA800076BC31 /* ProfileColorTableViewCell.swift */,
-				A32DB5EA2833F8A100DDBD76 /* HeighCellsOfProfile.swift */,
 			);
 			path = profileCells;
 			sourceTree = "<group>";
@@ -196,7 +193,6 @@
 				A309BDE2281EEA800076BC31 /* ProfileColorTableViewCell.swift in Sources */,
 				A32DB5E12832BC7A00DDBD76 /* TabBarController.swift in Sources */,
 				A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */,
-				A32DB5EB2833F8A100DDBD76 /* HeighCellsOfProfile.swift in Sources */,
 				A309BDDD281EE71B0076BC31 /* UITableViewCell+NibName.swift in Sources */,
 				A309BDDF281EE7D80076BC31 /* NSObject+ClassName.swift in Sources */,
 				A309BDE6281EEB000076BC31 /* UserPhotoTableViewCell.swift in Sources */,

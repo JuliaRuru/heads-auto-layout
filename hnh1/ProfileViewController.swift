@@ -30,11 +30,16 @@ class ProfileViewController: UIViewController {
     }
 }
 
+enum ConstantHeightOfCell: Int {
+    case standart = 58
+    case special = 423
+}
+
 extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        var height = constHeightOfCell.standart.rawValue
+        var height = ConstantHeightOfCell.standart.rawValue
         if indexPath.row == 0 {
-            height = constHeightOfCell.special.rawValue
+            height = ConstantHeightOfCell.special.rawValue
         }
         return CGFloat(height)
     }
