@@ -19,8 +19,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         passwordConfirmTextField.delegate = self
         registrationScrollView.delegate = self
         
-        let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
-        
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21.0)]
                 
