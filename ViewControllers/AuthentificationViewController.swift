@@ -53,9 +53,14 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
             if let _ = error {
                 AppSnackBar.showMessageSnackBar(in: self?.view, message: "Неверный логин или пароль")
             } else {
+                guard let tokenResponse = tokenResponse
+                    else {
+                        AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка авторизации")
+                        return
+                    }
+                self?.storageManager.saveToKeychain(tokenResponse.userId, key: .userId)
+                self?.storageManager.saveToKeychain(tokenResponse.token, key: .token)
                 self?.login()
-                self?.storageManager.saveToKeychain(tokenResponse?.userId ?? "", key: .userId)
-                self?.storageManager.saveToKeychain(tokenResponse?.token ?? "", key: .token)
             }
         }
     }
