@@ -23,14 +23,14 @@
                             <constraint firstAttribute="height" constant="207" id="rm0-Bg-cJN"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vpt-bf-4EL">
-                        <rect key="frame" x="128.5" y="104.5" width="177" height="175"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vpt-bf-4EL">
+                        <rect key="frame" x="130.5" y="103" width="175" height="175"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="175" id="AdS-1J-uBG"/>
                             <constraint firstAttribute="height" constant="175" id="Wye-cD-doe"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appleseed90210" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3l-MV-RpC">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3l-MV-RpC">
                         <rect key="frame" x="83" y="340" width="270" height="42"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -57,11 +57,12 @@
             <connections>
                 <outlet property="circlePhotoImageView" destination="vpt-bf-4EL" id="HEo-nf-f0j"/>
                 <outlet property="profilePhotoImageView" destination="MI1-b2-Hku" id="sB5-xa-SjE"/>
+                <outlet property="usernameLabel" destination="q3l-MV-RpC" id="DUw-XV-Q1r"/>
             </connections>
             <point key="canvasLocation" x="220.28985507246378" y="257.47767857142856"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
+        <image name="avatar" width="69.333335876464844" height="75"/>
     </resources>
 </document>

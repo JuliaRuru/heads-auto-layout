@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="372" height="58"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет профиля" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDt-4A-SSr">
-                        <rect key="frame" x="16" y="0.0" width="95" height="58"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDt-4A-SSr">
+                        <rect key="frame" x="16" y="0.0" width="0.0" height="58"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="58" id="c5L-hE-rq6"/>
                         </constraints>

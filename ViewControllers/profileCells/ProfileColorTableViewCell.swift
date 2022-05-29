@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EFColorPicker
 
 class ProfileColorTableViewCell: UITableViewCell {
     

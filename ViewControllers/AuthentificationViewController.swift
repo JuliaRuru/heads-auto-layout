@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+    let networkManager = ServiceLocator.authentificationNetworkManager()
+    let storageManager = StorageManager()
+    let progressHUD = JGProgressHUD()
     
     @IBOutlet weak var authLabel: UILabel!
     @IBOutlet weak var authTextLabel: UILabel!
@@ -15,26 +19,13 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var authStackView: UIStackView!
     @IBOutlet weak var authScrollView: UIScrollView!
-    @IBOutlet weak var registrateButton: FlickeringButton!
-    @IBOutlet weak var enterButton: FlickeringButton!
-    
-    @IBAction func enterButtonClick(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
-        tabBarController.modalPresentationStyle = .fullScreen
-        show(tabBarController, sender: self)
-    }
-
-    @IBAction func registerButtonClick(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let registrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
-        registrationViewController.modalPresentationStyle = .fullScreen
-        show(registrationViewController, sender: self)
-    }
-    
+    @IBAction func enterButtonClick(_ sender: Any) { checkForLogin() }
+    @IBAction func registerButtonClick(_ sender: Any) { goToRegistration() }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        progressHUD.textLabel.text = "Loading"
         loginTextField.delegate = self
         passwordTextField.delegate = self
         authScrollView.delegate = self
@@ -53,6 +44,34 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
         
         authStackView.setCustomSpacing(26, after: authLabel)
         authStackView.setCustomSpacing(76, after: authTextLabel)
+    }
+    
+    func checkForLogin() {
+        progressHUD.show(in: self.view)
+        networkManager.аuthentification(username: loginTextField.text ?? "", password: passwordTextField.text ?? "") { [ weak self ] (tokenResponse, error) in
+            self?.progressHUD.dismiss()
+            if let _ = error {
+                AppSnackBar.showMessageSnackBar(in: self?.view, message: "Неверный логин или пароль")
+            } else {
+                self?.login()
+                self?.storageManager.saveToKeychain(tokenResponse?.userId ?? "", key: .userId)
+                self?.storageManager.saveToKeychain(tokenResponse?.token ?? "", key: .token)
+            }
+        }
+    }
+
+    func login() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        tabBarController.modalPresentationStyle = .fullScreen
+        show(tabBarController, sender: self)
+    }
+
+    func goToRegistration() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let registrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
+        registrationViewController.modalPresentationStyle = .fullScreen
+        show(registrationViewController, sender: self)
     }
     
     func leftStep(_ textField: UITextField) {

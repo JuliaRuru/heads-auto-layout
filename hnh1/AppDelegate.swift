@@ -10,9 +10,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let storageManager = StorageManager()
+        if !storageManager.userDefaultsBool(key: .notFirstLaunch) {
+            storageManager.cleanKeychain()
+            storageManager.saveToUserDefaults(bool: true, key: .notFirstLaunch)
+        }
         // Override point for customization after application launch.
         return true
     }

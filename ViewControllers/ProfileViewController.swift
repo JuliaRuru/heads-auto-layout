@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import EFColorPicker
 
 class ProfileViewController: UIViewController {
+    
+    let networkManager = ServiceLocator.profileNetworkManager()
+    let storageManager = StorageManager()
     
     @IBOutlet weak var profileTableView: UITableView!
     
@@ -16,8 +20,12 @@ class ProfileViewController: UIViewController {
         case special = 423
     }
     
+    var profile: Profile?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadProfile()
         profileTableView.delegate = self
         profileTableView.dataSource = self
         profileTableView.backgroundColor = .darkGray
@@ -32,6 +40,18 @@ class ProfileViewController: UIViewController {
         profileTableView.register(nib3, forCellReuseIdentifier: ProfileColorTableViewCell.className)
         
         self.profileTableView.separatorColor = .black
+    }
+    
+    func loadProfile() {
+        let userId = storageManager.loadFromKeychain(key: .userId) ?? ""
+        networkManager.getProfile(profileId: userId) { [ weak self ] (profile, error) in
+            if let error = error {
+                AppSnackBar.showMessageSnackBar(in: self?.view, message: error.localizedDescription)
+            } else {
+                self?.profile = profile
+                self?.profileTableView.reloadData()
+            }
+        }
     }
 }
 
@@ -54,20 +74,25 @@ extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            guard let cell = (tableView.dequeueReusableCell(withIdentifier: UserPhotoTableViewCell.className) as? UserPhotoTableViewCell) else {
+            guard let cell = (tableView.dequeueReusableCell(withIdentifier: UserPhotoTableViewCell.className) as? UserPhotoTableViewCell)
+            else {
                 return UITableViewCell()
             }
-                return cell
+            let user = profile?.username
+            cell.usernameLabel.text = user
+            return cell
         case 1:
-            guard let cell = (tableView.dequeueReusableCell(withIdentifier: RegistrationDateTableViewCell.className) as? RegistrationDateTableViewCell) else {
+            guard let cell = (tableView.dequeueReusableCell(withIdentifier: RegistrationDateTableViewCell.className) as? RegistrationDateTableViewCell)
+            else {
                 return UITableViewCell()
             }
-                return cell
+            return cell
         case 2:
-            guard let cell = (tableView.dequeueReusableCell(withIdentifier: ProfileColorTableViewCell.className) as? ProfileColorTableViewCell) else {
+            guard let cell = (tableView.dequeueReusableCell(withIdentifier: ProfileColorTableViewCell.className) as? ProfileColorTableViewCell)
+            else {
                 return UITableViewCell()
             }
-                return cell
+            return cell
         default: break
         }
         return UITableViewCell()
