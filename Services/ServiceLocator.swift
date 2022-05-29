@@ -21,4 +21,14 @@ struct ServiceLocator {
     ProfileNetworkManager {
         NetworkManager()
     }
+    
+    static func keychainStorageManager() ->
+    KeychainStorageManager {
+        StorageManager()
+    }
+    
+    static func userDefaultsStorageManager() ->
+    UserDefaultsStorageManager {
+        StorageManager()
+    }
 }

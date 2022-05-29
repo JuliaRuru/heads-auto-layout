@@ -11,7 +11,7 @@ import JGProgressHUD
 class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
     
     let networkManager = ServiceLocator.registrationNetworkManager()
-    let storageManager = StorageManager()
+    let storageManager = ServiceLocator.keychainStorageManager()
     let progressHUD = JGProgressHUD()
 
     override func viewDidLoad() {

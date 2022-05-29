@@ -10,7 +10,7 @@ import JGProgressHUD
 
 class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
     let networkManager = ServiceLocator.authentificationNetworkManager()
-    let storageManager = StorageManager()
+    let storageManager = ServiceLocator.keychainStorageManager()
     let progressHUD = JGProgressHUD()
     
     @IBOutlet weak var authLabel: UILabel!
