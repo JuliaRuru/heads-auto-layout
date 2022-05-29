@@ -11,6 +11,6 @@ class PlanetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // TODO: planet selection and character loading
     }
 }
