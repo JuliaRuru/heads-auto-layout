@@ -76,7 +76,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         tabBarController.modalPresentationStyle = .fullScreen
-        show(tabBarController, sender: self)
+        present(tabBarController, animated: true)
     }
 
     func registerProfile() {

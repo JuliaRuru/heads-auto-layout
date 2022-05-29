@@ -64,14 +64,14 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         tabBarController.modalPresentationStyle = .fullScreen
-        show(tabBarController, sender: self)
+        present(tabBarController, animated: true)
     }
 
     func goToRegistration() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let registrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
         registrationViewController.modalPresentationStyle = .fullScreen
-        show(registrationViewController, sender: self)
+        present(registrationViewController, animated: true)
     }
     
     func leftStep(_ textField: UITextField) {
