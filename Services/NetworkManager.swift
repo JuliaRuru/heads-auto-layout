@@ -53,7 +53,6 @@ extension NetworkManager: RegistrationNetworkManager {
     func checkUsername(username: String, completion: ((CheckUsername?, Error?) -> ())?) {
         performRequest(
             url: "https://nanopost.evolitist.com/api/auth/checkUsername?username=\(username)",
-                       
             method: .get,
             onRequestCompleted: completion
         )
