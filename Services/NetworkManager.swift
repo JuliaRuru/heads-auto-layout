@@ -94,8 +94,6 @@ extension NetworkManager: ProfileNetworkManager {
         performRequest(
             url: "https://nanopost.evolitist.com/api/v1/profile/\(profileId)",
             method: .get,
-            parameters: nil,
-            headers: nil,
             onRequestCompleted: completion
         )
     }
