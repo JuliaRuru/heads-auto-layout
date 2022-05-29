@@ -93,7 +93,7 @@ protocol ProfileNetworkManager {
 extension NetworkManager: ProfileNetworkManager {
     func getProfile(profileId: String, completion: ((Profile?, Error?) -> ())?) {
         performRequest(
-            url: "https://nanopost.evolitist.com/api/v1/profile/\(profileId))",
+            url: "https://nanopost.evolitist.com/api/v1/profile/\(profileId)",
             method: .get,
             parameters: nil,
             headers: nil,
