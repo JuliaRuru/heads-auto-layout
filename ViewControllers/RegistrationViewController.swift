@@ -43,9 +43,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     @IBOutlet weak var passwordConfirmTextField: UITextField!
     @IBOutlet weak var doneButton: FlickeringButton!
     @IBOutlet weak var registrationScrollView: UIScrollView!
-    @IBAction func doneButtonClick(_ sender: Any) { checkForRegistration() }
-    
-    func checkForRegistration() {
+    @IBAction func checkForRegistration() {
         if loginTextField.text == nil || passwordTextField.text == nil || passwordConfirmTextField.text == nil {
             AppSnackBar.showMessageSnackBar(in: self.view, message: "Необходимо заполнить все поля")
             self.progressHUD.dismiss()
@@ -95,8 +93,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
                         AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка регистрации")
                         return
                     }
-                self?.storageManager.saveToKeychain(tokenResponse: tokenResponse, key: .userId)
-                self?.storageManager.saveToKeychain(tokenResponse: tokenResponse, key: .token)
+                self?.storageManager.saveToKeychain(tokenResponse.userId, key: .userId)
+                self?.storageManager.saveToKeychain(tokenResponse.token, key: .token)
                 self?.login()
             }
         }

@@ -19,8 +19,31 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var authStackView: UIStackView!
     @IBOutlet weak var authScrollView: UIScrollView!
-    @IBAction func enterButtonClick(_ sender: Any) { checkForLogin() }
-    @IBAction func registerButtonClick(_ sender: Any) { goToRegistration() }
+    @IBAction func checkForLogin() {
+        progressHUD.show(in: self.view)
+        networkManager.аuthentification(username: loginTextField.text ?? "", password: passwordTextField.text ?? "") { [ weak self ] (tokenResponse, error) in
+            self?.progressHUD.dismiss()
+            if let _ = error {
+                AppSnackBar.showMessageSnackBar(in: self?.view, message: "Неверный логин или пароль")
+            } else {
+                guard let tokenResponse = tokenResponse
+                    else {
+                        AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка авторизации")
+                        return
+                    }
+                self?.storageManager.saveToKeychain(tokenResponse.userId, key: .userId)
+                self?.storageManager.saveToKeychain(tokenResponse.token, key: .token)
+                self?.login()
+            }
+        }
+    }
+    
+    @IBAction func goToRegistration() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let registrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
+        registrationViewController.modalPresentationStyle = .fullScreen
+        present(registrationViewController, animated: true)
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,37 +69,11 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
         authStackView.setCustomSpacing(76, after: authTextLabel)
     }
     
-    func checkForLogin() {
-        progressHUD.show(in: self.view)
-        networkManager.аuthentification(username: loginTextField.text ?? "", password: passwordTextField.text ?? "") { [ weak self ] (tokenResponse, error) in
-            self?.progressHUD.dismiss()
-            if let _ = error {
-                AppSnackBar.showMessageSnackBar(in: self?.view, message: "Неверный логин или пароль")
-            } else {
-                guard let tokenResponse = tokenResponse
-                    else {
-                        AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка авторизации")
-                        return
-                    }
-                self?.storageManager.saveToKeychain(tokenResponse.userId, key: .userId)
-                self?.storageManager.saveToKeychain(tokenResponse.token, key: .token)
-                self?.login()
-            }
-        }
-    }
-
     func login() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         tabBarController.modalPresentationStyle = .fullScreen
         present(tabBarController, animated: true)
-    }
-
-    func goToRegistration() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let registrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
-        registrationViewController.modalPresentationStyle = .fullScreen
-        present(registrationViewController, animated: true)
     }
     
     func leftStep(_ textField: UITextField) {
