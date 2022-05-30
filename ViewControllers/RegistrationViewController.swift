@@ -46,32 +46,37 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     @IBAction func doneButtonClick(_ sender: Any) { checkForRegistration() }
     
     func checkForRegistration() {
-        progressHUD.show(in: self.view)
-        networkManager.checkUsername(username: loginTextField.text ?? "") { [ weak self ] (Response, error) in
-            if let error = error {
-                AppSnackBar.showMessageSnackBar(in: self?.view, message: error.localizedDescription)
+        if loginTextField.text == nil || passwordTextField.text == nil || passwordConfirmTextField.text == nil {
+            AppSnackBar.showMessageSnackBar(in: self.view, message: "Необходимо заполнить все поля")
+            self.progressHUD.dismiss()
+        }
+        else if passwordTextField.text != passwordConfirmTextField.text {
+            AppSnackBar.showMessageSnackBar(in: self.view, message: "Пароли не совпадают")
+            self.progressHUD.dismiss()
+        } else {
+            progressHUD.show(in: self.view)
+            networkManager.checkUsername(username: loginTextField.text ?? "") { [ weak self ] (Response, error) in
+                if let error = error {
+                    AppSnackBar.showMessageSnackBar(in: self?.view, message: error.localizedDescription)
                 self?.progressHUD.dismiss()
                 return
-            }
-            guard let result = Response?.result
-            else {
-                self?.progressHUD.dismiss()
-                return
-            }
-            if result == .free {
-                if self?.passwordTextField.text != self?.passwordConfirmTextField.text {
-                    AppSnackBar.showMessageSnackBar(in: self?.view, message: "Пароли не совпадают")
+                }
+                guard let result = Response?.result
+                else {
                     self?.progressHUD.dismiss()
                     return
                 }
-                self?.registerProfile()
-            } else {
+                if result == .free {
+                    self?.registerProfile()
+                    
+                } else {
                 AppSnackBar.showMessageSnackBar(in: self?.view, message: result.representedValue)
                 self?.progressHUD.dismiss()
+                }
             }
         }
     }
-            
+    
     func login() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
