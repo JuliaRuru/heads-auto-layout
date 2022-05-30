@@ -11,7 +11,7 @@ import JGProgressHUD
 class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
     
     let networkManager = ServiceLocator.registrationNetworkManager()
-    let storageManager = ServiceLocator.keychainStorageManager()
+    let storageManager = ServiceLocator.authentificationStorageManager()
     let progressHUD = JGProgressHUD()
 
     override func viewDidLoad() {
@@ -90,8 +90,13 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
             if let error = error?.localizedDescription {
                 AppSnackBar.showMessageSnackBar(in: self?.view, message: error)
             } else {
-                self?.storageManager.saveToKeychain(tokenResponse?.userId ?? "", key: .userId)
-                self?.storageManager.saveToKeychain(tokenResponse?.token ?? "", key: .token)
+                guard let tokenResponse = tokenResponse
+                    else {
+                        AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка регистрации")
+                        return
+                    }
+                self?.storageManager.saveToKeychain(tokenResponse: tokenResponse, key: .userId)
+                self?.storageManager.saveToKeychain(tokenResponse: tokenResponse, key: .token)
                 self?.login()
             }
         }

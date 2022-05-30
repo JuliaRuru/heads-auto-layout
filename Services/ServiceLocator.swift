@@ -22,6 +22,16 @@ struct ServiceLocator {
         NetworkManager()
     }
     
+    static func authentificationStorageManager() ->
+    AuthentificationStorageManager {
+        StorageManager()
+    }
+    
+    static func profileStorageManager() ->
+    ProfileStorageManager {
+        StorageManager()
+    }
+    
     static func keychainStorageManager() ->
     KeychainStorageManager {
         StorageManager()
@@ -30,5 +40,10 @@ struct ServiceLocator {
     static func userDefaultsStorageManager() ->
     UserDefaultsStorageManager {
         StorageManager()
+    }
+    
+    static func locationNetworkManager() ->
+    LocationNetworkManager {
+        NetworkManager()
     }
 }
