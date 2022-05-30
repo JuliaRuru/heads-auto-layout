@@ -85,16 +85,11 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     }
 
     func registerProfile() {
-        let group = DispatchGroup()
-        group.enter()
         networkManager.registration(username: loginTextField.text ?? "", password: passwordTextField.text ?? "") { [ weak self ] tokenResponse, error in
             self?.progressHUD.dismiss()
             if let error = error?.localizedDescription {
                 AppSnackBar.showMessageSnackBar(in: self?.view, message: error)
             } else {
-                group.leave()
-            }
-            group.notify(queue: .main) {
                 self?.storageManager.saveToKeychain(tokenResponse?.userId ?? "", key: .userId)
                 self?.storageManager.saveToKeychain(tokenResponse?.token ?? "", key: .token)
                 self?.login()
