@@ -42,7 +42,6 @@
 		A3C883C928453A8E001649F0 /* AuthentificationStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883C828453A8E001649F0 /* AuthentificationStorageManager.swift */; };
 		A3C883CB2845412D001649F0 /* ProfileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883CA2845412D001649F0 /* ProfileStorageManager.swift */; };
 		A3C883CF28454518001649F0 /* UserDefaultsStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883CE28454518001649F0 /* UserDefaultsStorageManager.swift */; };
-		A3C883DF284667B6001649F0 /* EFColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = A3C883DE284667B6001649F0 /* EFColorPicker */; };
 		A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D127FC7A34007CC36E /* AppDelegate.swift */; };
 		A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */; };
 		A3CD15D627FC7A34007CC36E /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */; };
@@ -102,7 +101,6 @@
 			files = (
 				A32DB5F928391E7000DDBD76 /* Alamofire in Frameworks */,
 				A32DB60A283B8BD900DDBD76 /* SnackBar in Frameworks */,
-				A3C883DF284667B6001649F0 /* EFColorPicker in Frameworks */,
 				A32DB5F628391E5800DDBD76 /* JGProgressHUD in Frameworks */,
 				A32DB5EE283622ED00DDBD76 /* KeychainAccess in Frameworks */,
 			);
@@ -258,7 +256,6 @@
 				A32DB5F528391E5800DDBD76 /* JGProgressHUD */,
 				A32DB5F828391E7000DDBD76 /* Alamofire */,
 				A32DB609283B8BD900DDBD76 /* SnackBar */,
-				A3C883DE284667B6001649F0 /* EFColorPicker */,
 			);
 			productName = hnh1;
 			productReference = A3CD15CE27FC7A34007CC36E /* hnh1.app */;
@@ -293,7 +290,6 @@
 				A32DB5F428391E5800DDBD76 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 				A32DB5F728391E7000DDBD76 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A32DB608283B8BD800DDBD76 /* XCRemoteSwiftPackageReference "SnackBar" */,
-				A32DB615283FDF2200DDBD76 /* XCRemoteSwiftPackageReference "EFColorPicker" */,
 			);
 			productRefGroup = A3CD15CF27FC7A34007CC36E /* Products */;
 			projectDirPath = "";
@@ -608,14 +604,6 @@
 				kind = branch;
 			};
 		};
-		A32DB615283FDF2200DDBD76 /* XCRemoteSwiftPackageReference "EFColorPicker" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/EFPrefix/EFColorPicker.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -638,11 +626,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A32DB608283B8BD800DDBD76 /* XCRemoteSwiftPackageReference "SnackBar" */;
 			productName = SnackBar;
-		};
-		A3C883DE284667B6001649F0 /* EFColorPicker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A32DB615283FDF2200DDBD76 /* XCRemoteSwiftPackageReference "EFColorPicker" */;
-			productName = EFColorPicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

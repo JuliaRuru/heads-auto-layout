@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "EFColorPicker",
-        "repositoryURL": "https://github.com/EFPrefix/EFColorPicker.git",
-        "state": {
-          "branch": "master",
-          "revision": "75ec99271b7f4be0510a128c31c2f9d62efaeb7a",
-          "version": null
-        }
-      },
-      {
         "package": "JGProgressHUD",
         "repositoryURL": "https://github.com/JonasGessner/JGProgressHUD.git",
         "state": {
