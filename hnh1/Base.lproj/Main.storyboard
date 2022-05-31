@@ -36,7 +36,7 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="doneButtonClick:" destination="dZC-gO-MJN" eventType="touchUpInside" id="Kuv-b4-jIR"/>
+                                                    <action selector="checkForRegistration:" destination="dZC-gO-MJN" eventType="touchUpInside" id="AvW-dt-4v3"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="5Lv-XD-j08">
@@ -90,6 +90,7 @@
                                             <constraint firstItem="Dkp-NO-XKG" firstAttribute="top" secondItem="PHi-mI-QgO" secondAttribute="top" priority="999" constant="225" id="2if-GP-yvE"/>
                                             <constraint firstItem="e95-pC-28J" firstAttribute="top" secondItem="Dkp-NO-XKG" secondAttribute="bottom" constant="44" id="4NG-0o-vpx"/>
                                             <constraint firstItem="HEn-E7-WJc" firstAttribute="top" secondItem="e95-pC-28J" secondAttribute="bottom" constant="32" id="Ac2-dI-rkQ"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dkp-NO-XKG" secondAttribute="trailing" constant="20" symbolic="YES" id="CeE-nv-2kE"/>
                                             <constraint firstItem="HEn-E7-WJc" firstAttribute="leading" secondItem="PHi-mI-QgO" secondAttribute="leading" constant="16" id="FYi-1l-ZjX"/>
                                             <constraint firstItem="Dkp-NO-XKG" firstAttribute="leading" secondItem="8di-W0-gyB" secondAttribute="trailing" constant="11" id="GDB-fQ-Ga7"/>
                                             <constraint firstItem="8di-W0-gyB" firstAttribute="leading" secondItem="PHi-mI-QgO" secondAttribute="leading" constant="21" id="HTR-YQ-eMW"/>
@@ -151,18 +152,18 @@
                     </tabBar>
                     <connections>
                         <segue destination="nSZ-ka-3Vd" kind="relationship" relationship="viewControllers" id="gzP-kP-EmI"/>
-                        <segue destination="Nan-kI-bqB" kind="relationship" relationship="viewControllers" id="QAg-Wv-KNE"/>
+                        <segue destination="Nan-kI-bqB" kind="relationship" relationship="viewControllers" id="z9M-Gy-mJd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6x-Ao-P6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1057" y="399"/>
         </scene>
-        <!--Profile-->
+        <!--Профиль-->
         <scene sceneID="ICo-Yc-q2c">
             <objects>
                 <navigationController storyboardIdentifier="NavigationControllerProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nSZ-ka-3Vd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile" id="wow-Z4-rcg"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="profile" selectedImage="profile" id="wow-Z4-rcg"/>
                     <navigationItem key="navigationItem" id="KhY-ge-neT"/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tRR-Q3-C25">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -222,17 +223,32 @@
             </objects>
             <point key="canvasLocation" x="677" y="11"/>
         </scene>
-        <!--Planet View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="FhQ-UU-YFx">
             <objects>
-                <viewController storyboardIdentifier="PlanetViewController" id="7Hd-bf-6In" customClass="PlanetViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MeP-ls-hDq">
+                <viewController storyboardIdentifier="LocationViewController" id="7Hd-bf-6In" customClass="LocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d7K-br-1d3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="CNb-k9-g1v"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-2O-eaQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FWs-K4-2WK"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FWs-K4-2WK" firstAttribute="bottom" secondItem="ZBP-2O-eaQ" secondAttribute="bottom" id="Tar-pA-aW5"/>
+                            <constraint firstItem="FWs-K4-2WK" firstAttribute="trailing" secondItem="ZBP-2O-eaQ" secondAttribute="trailing" id="fTF-2o-iNp"/>
+                            <constraint firstItem="ZBP-2O-eaQ" firstAttribute="top" secondItem="d7K-br-1d3" secondAttribute="top" id="oRs-dY-5QK"/>
+                            <constraint firstItem="ZBP-2O-eaQ" firstAttribute="leading" secondItem="FWs-K4-2WK" secondAttribute="leading" id="ugQ-nf-UcN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GB2-qu-pTW"/>
+                    <connections>
+                        <outlet property="locationTableView" destination="ZBP-2O-eaQ" id="gM2-ln-rOt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0M-MR-ZOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,7 +280,7 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="registerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fHK-xa-8Bl"/>
+                                                    <action selector="goToRegistration" destination="BYZ-38-t0r" eventType="touchUpInside" id="icb-T1-RMA"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-ZN-ULQ">
@@ -320,7 +336,7 @@
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="enterButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="03l-3T-UR9"/>
+                                                    <action selector="checkForLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="HDT-qk-0bY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -374,18 +390,18 @@
             </objects>
             <point key="canvasLocation" x="-1936" y="11"/>
         </scene>
-        <!--Planet-->
+        <!--Выбор планеты-->
         <scene sceneID="GJJ-QG-OJn">
             <objects>
                 <navigationController storyboardIdentifier="NavigationControllerClear" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nan-kI-bqB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Planet" image="planet" selectedImage="planet" id="uFd-QT-GY0"/>
-                    <navigationItem key="navigationItem" id="gKp-gm-cx3"/>
+                    <tabBarItem key="tabBarItem" title="Выбор планеты" image="planet" selectedImage="planet" id="uFd-QT-GY0"/>
+                    <navigationItem key="navigationItem" title="Выбор планеты" id="gKp-gm-cx3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dmc-r0-gQI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="7Hd-bf-6In" kind="relationship" relationship="rootViewController" id="ZdS-iI-xud"/>
+                        <segue destination="7Hd-bf-6In" kind="relationship" relationship="rootViewController" id="efT-Wb-iI6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcg-as-sj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -408,9 +424,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

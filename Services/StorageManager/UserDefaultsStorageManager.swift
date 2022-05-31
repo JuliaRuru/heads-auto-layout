@@ -6,10 +6,16 @@
 //
 
 import Foundation
+import KeychainAccess
+
+private struct Constants {
+    static let serviceId = "StorageManagerKeychain.Service.Id"
+}
 
 protocol UserDefaultsStorageManager {
     func saveToUserDefaults(bool: Bool, key: StorageManager.StorageManagerKey)
     func userDefaultsBool(key: StorageManager.StorageManagerKey) -> Bool
+    func cleanKeychain()
 }
 
 extension StorageManager: UserDefaultsStorageManager {
@@ -19,5 +25,14 @@ extension StorageManager: UserDefaultsStorageManager {
 
     func userDefaultsBool(key: StorageManagerKey) -> Bool {
         UserDefaults.standard.bool(forKey: key.rawValue)
+    }
+    
+    func cleanKeychain() {
+        let keychain = Keychain(service: Constants.serviceId)
+        do {
+            try keychain.removeAll()
+        } catch {
+            print(error as Any)
+        }
     }
 }

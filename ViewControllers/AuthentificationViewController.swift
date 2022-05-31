@@ -20,20 +20,24 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
     @IBOutlet weak var authStackView: UIStackView!
     @IBOutlet weak var authScrollView: UIScrollView!
     @IBAction func checkForLogin() {
-        progressHUD.show(in: self.view)
-        networkManager.аuthentification(username: loginTextField.text ?? "", password: passwordTextField.text ?? "") { [ weak self ] (tokenResponse, error) in
-            self?.progressHUD.dismiss()
-            if let _ = error {
-                AppSnackBar.showMessageSnackBar(in: self?.view, message: "Неверный логин или пароль")
-            } else {
-                guard let tokenResponse = tokenResponse
-                    else {
-                        AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка авторизации")
-                        return
-                    }
-                self?.storageManager.saveToKeychain(tokenResponse.userId, key: .userId)
-                self?.storageManager.saveToKeychain(tokenResponse.token, key: .token)
-                self?.login()
+        if loginTextField.text == "" || passwordTextField.text == "" {
+            AppSnackBar.showMessageSnackBar(in: self.view, message: "Необходимо заполнить все поля")
+            self.progressHUD.dismiss()
+        } else {
+            progressHUD.show(in: self.view)
+            networkManager.аuthentification(username: loginTextField.text ?? "", password: passwordTextField.text ?? "") { [ weak self ] (tokenResponse, error) in
+                self?.progressHUD.dismiss()
+                if let _ = error {
+                    AppSnackBar.showMessageSnackBar(in: self?.view, message: "Неверный логин или пароль")
+                } else {
+                    guard let tokenResponse = tokenResponse
+                        else {
+                            AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка авторизации")
+                            return
+                        }
+                    self?.storageManager.save(token: tokenResponse)
+                    self?.login()
+                }
             }
         }
     }

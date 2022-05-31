@@ -28,9 +28,20 @@
 		A32DB60E283C004600DDBD76 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB60D283C004600DDBD76 /* ServiceLocator.swift */; };
 		A32DB610283C0EDB00DDBD76 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB60F283C0EDB00DDBD76 /* ProfileResponse.swift */; };
 		A32DB612283CAE8D00DDBD76 /* AppSnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB611283CAE8D00DDBD76 /* AppSnackBar.swift */; };
-		A32DB617283FDF2200DDBD76 /* EFColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = A32DB616283FDF2200DDBD76 /* EFColorPicker */; };
-		A32DB61E2842DA0800DDBD76 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB61D2842DA0800DDBD76 /* PlanetViewController.swift */; };
 		A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3917E94280D67A2009168F0 /* FlickeringButton.swift */; };
+		A3C883B128448923001649F0 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883AF28448923001649F0 /* LocationViewController.swift */; };
+		A3C883B628448A51001649F0 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883B428448A51001649F0 /* LocationTableViewCell.swift */; };
+		A3C883B92844ACD2001649F0 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883B82844ACD2001649F0 /* InfoResponse.swift */; };
+		A3C883BB2844ACF8001649F0 /* ResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883BA2844ACF8001649F0 /* ResultsResponse.swift */; };
+		A3C883BD2844B79A001649F0 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883BC2844B79A001649F0 /* LocationResponse.swift */; };
+		A3C883BF2845384C001649F0 /* ProfileNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883BE2845384C001649F0 /* ProfileNetworkManager.swift */; };
+		A3C883C1284538E3001649F0 /* RegistrationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883C0284538E3001649F0 /* RegistrationNetworkManager.swift */; };
+		A3C883C328453939001649F0 /* AuthentificationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883C228453939001649F0 /* AuthentificationNetworkManager.swift */; };
+		A3C883C52845395A001649F0 /* LocationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883C42845395A001649F0 /* LocationNetworkManager.swift */; };
+		A3C883C928453A8E001649F0 /* AuthentificationStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883C828453A8E001649F0 /* AuthentificationStorageManager.swift */; };
+		A3C883CB2845412D001649F0 /* ProfileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883CA2845412D001649F0 /* ProfileStorageManager.swift */; };
+		A3C883CF28454518001649F0 /* UserDefaultsStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883CE28454518001649F0 /* UserDefaultsStorageManager.swift */; };
+		A3C883DF284667B6001649F0 /* EFColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = A3C883DE284667B6001649F0 /* EFColorPicker */; };
 		A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D127FC7A34007CC36E /* AppDelegate.swift */; };
 		A3CD15D427FC7A34007CC36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */; };
 		A3CD15D627FC7A34007CC36E /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */; };
@@ -58,8 +69,20 @@
 		A32DB60D283C004600DDBD76 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		A32DB60F283C0EDB00DDBD76 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		A32DB611283CAE8D00DDBD76 /* AppSnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSnackBar.swift; sourceTree = "<group>"; };
-		A32DB61D2842DA0800DDBD76 /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
 		A3917E94280D67A2009168F0 /* FlickeringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringButton.swift; sourceTree = "<group>"; };
+		A3C883AF28448923001649F0 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A3C883B428448A51001649F0 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		A3C883B528448A51001649F0 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
+		A3C883B82844ACD2001649F0 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
+		A3C883BA2844ACF8001649F0 /* ResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResponse.swift; sourceTree = "<group>"; };
+		A3C883BC2844B79A001649F0 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
+		A3C883BE2845384C001649F0 /* ProfileNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetworkManager.swift; sourceTree = "<group>"; };
+		A3C883C0284538E3001649F0 /* RegistrationNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationNetworkManager.swift; sourceTree = "<group>"; };
+		A3C883C228453939001649F0 /* AuthentificationNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationNetworkManager.swift; sourceTree = "<group>"; };
+		A3C883C42845395A001649F0 /* LocationNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNetworkManager.swift; sourceTree = "<group>"; };
+		A3C883C828453A8E001649F0 /* AuthentificationStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationStorageManager.swift; sourceTree = "<group>"; };
+		A3C883CA2845412D001649F0 /* ProfileStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStorageManager.swift; sourceTree = "<group>"; };
+		A3C883CE28454518001649F0 /* UserDefaultsStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorageManager.swift; sourceTree = "<group>"; };
 		A3CD15CE27FC7A34007CC36E /* hnh1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hnh1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3CD15D127FC7A34007CC36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +101,7 @@
 			files = (
 				A32DB5F928391E7000DDBD76 /* Alamofire in Frameworks */,
 				A32DB60A283B8BD900DDBD76 /* SnackBar in Frameworks */,
-				A32DB617283FDF2200DDBD76 /* EFColorPicker in Frameworks */,
+				A3C883DF284667B6001649F0 /* EFColorPicker in Frameworks */,
 				A32DB5F628391E5800DDBD76 /* JGProgressHUD in Frameworks */,
 				A32DB5EE283622ED00DDBD76 /* KeychainAccess in Frameworks */,
 			);
@@ -105,10 +128,10 @@
 		A32DB5EF28369E7300DDBD76 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A3C883C7284539BA001649F0 /* StorageManager */,
+				A3C883C62845397C001649F0 /* NetworkManager */,
 				A32DB5FF283969B600DDBD76 /* Response */,
 				A32DB60D283C004600DDBD76 /* ServiceLocator.swift */,
-				A32DB5F028369E9200DDBD76 /* StorageManager.swift */,
-				A32DB5FD2839210200DDBD76 /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -120,6 +143,9 @@
 				A32DB60428396F3000DDBD76 /* CheckUsername.swift */,
 				A32DB606283972BD00DDBD76 /* TokenResponse.swift */,
 				A32DB60F283C0EDB00DDBD76 /* ProfileResponse.swift */,
+				A3C883B82844ACD2001649F0 /* InfoResponse.swift */,
+				A3C883BA2844ACF8001649F0 /* ResultsResponse.swift */,
+				A3C883BC2844B79A001649F0 /* LocationResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -127,13 +153,53 @@
 		A32DB61A2842A7E800DDBD76 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A3C883B328448A1D001649F0 /* locationCells */,
 				A32DB5E32832D18900DDBD76 /* profileCells */,
 				A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */,
 				A3DD9AF22808604A008BDB37 /* RegistrationViewController.swift */,
 				A309BDC4281AA35E0076BC31 /* ProfileViewController.swift */,
-				A32DB61D2842DA0800DDBD76 /* PlanetViewController.swift */,
+				A3C883AF28448923001649F0 /* LocationViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A3C883B328448A1D001649F0 /* locationCells */ = {
+			isa = PBXGroup;
+			children = (
+				A3C883B428448A51001649F0 /* LocationTableViewCell.swift */,
+				A3C883B528448A51001649F0 /* LocationTableViewCell.xib */,
+			);
+			path = locationCells;
+			sourceTree = "<group>";
+		};
+		A3C883C62845397C001649F0 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				A32DB5FD2839210200DDBD76 /* NetworkManager.swift */,
+				A3C883C228453939001649F0 /* AuthentificationNetworkManager.swift */,
+				A3C883C0284538E3001649F0 /* RegistrationNetworkManager.swift */,
+				A3C883BE2845384C001649F0 /* ProfileNetworkManager.swift */,
+				A3C883C42845395A001649F0 /* LocationNetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		A3C883C7284539BA001649F0 /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				A32DB5F028369E9200DDBD76 /* StorageManager.swift */,
+				A3C883C828453A8E001649F0 /* AuthentificationStorageManager.swift */,
+				A3C883CA2845412D001649F0 /* ProfileStorageManager.swift */,
+				A3C883CE28454518001649F0 /* UserDefaultsStorageManager.swift */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		A3C883DD284667B6001649F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A3CD15C527FC7A34007CC36E = {
@@ -143,6 +209,7 @@
 				A32DB5EF28369E7300DDBD76 /* Services */,
 				A3CD15D027FC7A34007CC36E /* hnh1 */,
 				A3CD15CF27FC7A34007CC36E /* Products */,
+				A3C883DD284667B6001649F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,7 +257,7 @@
 				A32DB5F528391E5800DDBD76 /* JGProgressHUD */,
 				A32DB5F828391E7000DDBD76 /* Alamofire */,
 				A32DB609283B8BD900DDBD76 /* SnackBar */,
-				A32DB616283FDF2200DDBD76 /* EFColorPicker */,
+				A3C883DE284667B6001649F0 /* EFColorPicker */,
 			);
 			productName = hnh1;
 			productReference = A3CD15CE27FC7A34007CC36E /* hnh1.app */;
@@ -257,20 +324,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C883C1284538E3001649F0 /* RegistrationNetworkManager.swift in Sources */,
+				A3C883B128448923001649F0 /* LocationViewController.swift in Sources */,
 				A309BDC5281AA35E0076BC31 /* ProfileViewController.swift in Sources */,
+				A3C883C928453A8E001649F0 /* AuthentificationStorageManager.swift in Sources */,
+				A3C883CF28454518001649F0 /* UserDefaultsStorageManager.swift in Sources */,
 				A309BDD6281EE0940076BC31 /* RegistrationDateTableViewCell.swift in Sources */,
-				A32DB61E2842DA0800DDBD76 /* PlanetViewController.swift in Sources */,
 				A3CD15D627FC7A34007CC36E /* AuthentificationViewController.swift in Sources */,
 				A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */,
 				A32DB60528396F3000DDBD76 /* CheckUsername.swift in Sources */,
+				A3C883BB2844ACF8001649F0 /* ResultsResponse.swift in Sources */,
+				A3C883B92844ACD2001649F0 /* InfoResponse.swift in Sources */,
 				A3DD9AF32808604A008BDB37 /* RegistrationViewController.swift in Sources */,
+				A3C883B628448A51001649F0 /* LocationTableViewCell.swift in Sources */,
 				A32DB607283972BD00DDBD76 /* TokenResponse.swift in Sources */,
 				A309BDE2281EEA800076BC31 /* ProfileColorTableViewCell.swift in Sources */,
+				A3C883C52845395A001649F0 /* LocationNetworkManager.swift in Sources */,
 				A32DB610283C0EDB00DDBD76 /* ProfileResponse.swift in Sources */,
 				A32DB60328396DE900DDBD76 /* UsernameStatus.swift in Sources */,
 				A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */,
+				A3C883C328453939001649F0 /* AuthentificationNetworkManager.swift in Sources */,
+				A3C883CB2845412D001649F0 /* ProfileStorageManager.swift in Sources */,
+				A3C883BF2845384C001649F0 /* ProfileNetworkManager.swift in Sources */,
 				A309BDDD281EE71B0076BC31 /* UITableViewCell+NibName.swift in Sources */,
 				A309BDDF281EE7D80076BC31 /* NSObject+ClassName.swift in Sources */,
+				A3C883BD2844B79A001649F0 /* LocationResponse.swift in Sources */,
 				A32DB5FE2839210200DDBD76 /* NetworkManager.swift in Sources */,
 				A32DB60E283C004600DDBD76 /* ServiceLocator.swift in Sources */,
 				A309BDE6281EEB000076BC31 /* UserPhotoTableViewCell.swift in Sources */,
@@ -559,7 +637,7 @@
 			package = A32DB608283B8BD800DDBD76 /* XCRemoteSwiftPackageReference "SnackBar" */;
 			productName = SnackBar;
 		};
-		A32DB616283FDF2200DDBD76 /* EFColorPicker */ = {
+		A3C883DE284667B6001649F0 /* EFColorPicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A32DB615283FDF2200DDBD76 /* XCRemoteSwiftPackageReference "EFColorPicker" */;
 			productName = EFColorPicker;
