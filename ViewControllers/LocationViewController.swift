@@ -46,11 +46,11 @@ class LocationViewController: UIViewController {
 }
 
 extension LocationViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let height = 58
-//        return CGFloat(height)
-        return CGFloat()
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+////        let height = 58
+////        return CGFloat(height)
+//        return CGFloat()
+//    }
 }
 
 extension LocationViewController: UITableViewDataSource {
@@ -61,13 +61,11 @@ extension LocationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: LocationTableViewCell.className) as? LocationTableViewCell {
         let location = locations[indexPath.row]
-        cell.locationNameLabel.text = location.name
-        cell.locationTypeLabel.text = location.type
-        cell.populationLabel.text = "population: \(location.residents.count)"
+        cell.populationPlanetLabel.text = location.name
+        cell.typePlanetLabel.text = location.type
+        cell.populationPlanetLabel.text = "population: \(location.residents.count)"
         return cell
         }
         return UITableViewCell()
     }
-    
-    
 }

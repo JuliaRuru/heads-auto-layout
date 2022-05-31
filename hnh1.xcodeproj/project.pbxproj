@@ -28,9 +28,10 @@
 		A32DB60E283C004600DDBD76 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB60D283C004600DDBD76 /* ServiceLocator.swift */; };
 		A32DB610283C0EDB00DDBD76 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB60F283C0EDB00DDBD76 /* ProfileResponse.swift */; };
 		A32DB612283CAE8D00DDBD76 /* AppSnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DB611283CAE8D00DDBD76 /* AppSnackBar.swift */; };
+		A359CF4C28466D820021BDCC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF4B28466D820021BDCC /* LocationViewController.swift */; };
+		A359CF4F28466F6B0021BDCC /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF4D28466F6B0021BDCC /* LocationTableViewCell.swift */; };
+		A359CF5028466F6B0021BDCC /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A359CF4E28466F6B0021BDCC /* LocationTableViewCell.xib */; };
 		A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3917E94280D67A2009168F0 /* FlickeringButton.swift */; };
-		A3C883B128448923001649F0 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883AF28448923001649F0 /* LocationViewController.swift */; };
-		A3C883B628448A51001649F0 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883B428448A51001649F0 /* LocationTableViewCell.swift */; };
 		A3C883B92844ACD2001649F0 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883B82844ACD2001649F0 /* InfoResponse.swift */; };
 		A3C883BB2844ACF8001649F0 /* ResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883BA2844ACF8001649F0 /* ResultsResponse.swift */; };
 		A3C883BD2844B79A001649F0 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883BC2844B79A001649F0 /* LocationResponse.swift */; };
@@ -69,10 +70,10 @@
 		A32DB60D283C004600DDBD76 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		A32DB60F283C0EDB00DDBD76 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		A32DB611283CAE8D00DDBD76 /* AppSnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSnackBar.swift; sourceTree = "<group>"; };
+		A359CF4B28466D820021BDCC /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A359CF4D28466F6B0021BDCC /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		A359CF4E28466F6B0021BDCC /* LocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
 		A3917E94280D67A2009168F0 /* FlickeringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringButton.swift; sourceTree = "<group>"; };
-		A3C883AF28448923001649F0 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		A3C883B428448A51001649F0 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
-		A3C883B528448A51001649F0 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
 		A3C883B82844ACD2001649F0 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
 		A3C883BA2844ACF8001649F0 /* ResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResponse.swift; sourceTree = "<group>"; };
 		A3C883BC2844B79A001649F0 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
@@ -158,7 +159,7 @@
 				A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */,
 				A3DD9AF22808604A008BDB37 /* RegistrationViewController.swift */,
 				A309BDC4281AA35E0076BC31 /* ProfileViewController.swift */,
-				A3C883AF28448923001649F0 /* LocationViewController.swift */,
+				A359CF4B28466D820021BDCC /* LocationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,8 +167,8 @@
 		A3C883B328448A1D001649F0 /* locationCells */ = {
 			isa = PBXGroup;
 			children = (
-				A3C883B428448A51001649F0 /* LocationTableViewCell.swift */,
-				A3C883B528448A51001649F0 /* LocationTableViewCell.xib */,
+				A359CF4D28466F6B0021BDCC /* LocationTableViewCell.swift */,
+				A359CF4E28466F6B0021BDCC /* LocationTableViewCell.xib */,
 			);
 			path = locationCells;
 			sourceTree = "<group>";
@@ -310,6 +311,7 @@
 			files = (
 				A309BDE3281EEA800076BC31 /* ProfileColorTableViewCell.xib in Resources */,
 				A3CD15DE27FC7A37007CC36E /* LaunchScreen.storyboard in Resources */,
+				A359CF5028466F6B0021BDCC /* LocationTableViewCell.xib in Resources */,
 				A3CD15DB27FC7A37007CC36E /* Assets.xcassets in Resources */,
 				A309BDE7281EEB000076BC31 /* UserPhotoTableViewCell.xib in Resources */,
 				A3CD15D927FC7A34007CC36E /* Main.storyboard in Resources */,
@@ -325,10 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C883C1284538E3001649F0 /* RegistrationNetworkManager.swift in Sources */,
-				A3C883B128448923001649F0 /* LocationViewController.swift in Sources */,
 				A309BDC5281AA35E0076BC31 /* ProfileViewController.swift in Sources */,
 				A3C883C928453A8E001649F0 /* AuthentificationStorageManager.swift in Sources */,
 				A3C883CF28454518001649F0 /* UserDefaultsStorageManager.swift in Sources */,
+				A359CF4F28466F6B0021BDCC /* LocationTableViewCell.swift in Sources */,
 				A309BDD6281EE0940076BC31 /* RegistrationDateTableViewCell.swift in Sources */,
 				A3CD15D627FC7A34007CC36E /* AuthentificationViewController.swift in Sources */,
 				A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */,
@@ -336,9 +338,9 @@
 				A3C883BB2844ACF8001649F0 /* ResultsResponse.swift in Sources */,
 				A3C883B92844ACD2001649F0 /* InfoResponse.swift in Sources */,
 				A3DD9AF32808604A008BDB37 /* RegistrationViewController.swift in Sources */,
-				A3C883B628448A51001649F0 /* LocationTableViewCell.swift in Sources */,
 				A32DB607283972BD00DDBD76 /* TokenResponse.swift in Sources */,
 				A309BDE2281EEA800076BC31 /* ProfileColorTableViewCell.swift in Sources */,
+				A359CF4C28466D820021BDCC /* LocationViewController.swift in Sources */,
 				A3C883C52845395A001649F0 /* LocationNetworkManager.swift in Sources */,
 				A32DB610283C0EDB00DDBD76 /* ProfileResponse.swift in Sources */,
 				A32DB60328396DE900DDBD76 /* UsernameStatus.swift in Sources */,
