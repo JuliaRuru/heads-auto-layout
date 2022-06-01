@@ -32,11 +32,6 @@ struct ServiceLocator {
         StorageManager()
     }
     
-//    static func keychainStorageManager() ->
-//    KeychainStorageManager {
-//        StorageManager()
-//    }
-    
     static func userDefaultsStorageManager() ->
     UserDefaultsStorageManager {
         StorageManager()

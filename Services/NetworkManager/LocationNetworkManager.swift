@@ -9,13 +9,13 @@ import Foundation
 import Alamofire
 
 protocol LocationNetworkManager {
-    func getLocations(completion: ((LocationResponse?, Error?) -> ())?)
+    func getLocations(url: String, completion: ((LocationResponse?, Error?) -> ())?)
 }
 
 extension NetworkManager: LocationNetworkManager {
-    func getLocations(completion: ((LocationResponse?, Error?) -> ())?) {
+    func getLocations(url: String, completion: ((LocationResponse?, Error?) -> ())?) {
         performRequest(
-            url: "https://rickandmortyapi.com/api/location",
+            url: url,
             method: .get,
             onRequestCompleted: completion
         )

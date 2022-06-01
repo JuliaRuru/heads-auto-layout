@@ -12,4 +12,5 @@ struct Results: Decodable {
     let name: String
     let type: String
     let residents: [String]
+    let url: String
 }

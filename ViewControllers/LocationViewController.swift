@@ -7,6 +7,7 @@
 
 import UIKit
 import JGProgressHUD
+import SwiftUI
 
 class LocationViewController: UIViewController {
     
@@ -14,43 +15,72 @@ class LocationViewController: UIViewController {
     let progressHUD = JGProgressHUD()
     var info: Info?
     var locations: [Results] = []
+    let locationsUrl = "https://rickandmortyapi.com/api/location"
 
     @IBOutlet weak var locationTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getLocationList()
+        getLocationList(url: locationsUrl)
         locationTableView.delegate = self
         locationTableView.dataSource = self
+        locationTableView.backgroundColor = .darkGray
+        locationTableView.separatorColor = .black
         
         let nib = UINib(nibName: LocationTableViewCell.className, bundle: nil)
         locationTableView.register(nib, forCellReuseIdentifier: LocationTableViewCell.className)
     }
     
-    func getLocationList() {
+    func getLocationList(url: String) {
         progressHUD.show(in: self.view)
-        networkManager.getLocations() { [ weak self ] (locationResponse, error) in
+        networkManager.getLocations(url: url) { [ weak self ] (locationResponse, error) in
             if let error = error {
                 AppSnackBar.showMessageSnackBar(in: self?.view, message: error.localizedDescription)
+                self?.progressHUD.dismiss()
             }
             self?.info = locationResponse?.info
-            guard let locations = locationResponse?.results
+            self?.progressHUD.dismiss()
+            guard let locationResponse = locationResponse
             else {
                 return
             }
-            self?.locations.append(contentsOf: locations)
+            self?.locations.append(contentsOf: locationResponse.results)
             self?.locationTableView.reloadData()
         }
     }
 }
 
 extension LocationViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-////        let height = 58
-////        return CGFloat(height)
-//        return CGFloat()
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = 58
+        return CGFloat(height)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let nextLocations = info?.next
+        else {
+            return
+        }
+        if locations.count/2 == indexPath.row {
+            getLocationList(url: nextLocations)
+        }
+    }
+    
+    func goToResidents(indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let residentsViewController = storyboard.instantiateViewController(withIdentifier: "ResidentsViewController") as? ResidentsViewController {
+            residentsViewController.url = locations[indexPath.row].url
+            residentsViewController.modalPresentationStyle = .fullScreen
+            present(residentsViewController, animated: true)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if locations[indexPath.row].residents.count != 0 {
+            goToResidents(indexPath: indexPath)
+        }
+    }
 }
 
 extension LocationViewController: UITableViewDataSource {
@@ -60,11 +90,16 @@ extension LocationViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: LocationTableViewCell.className) as? LocationTableViewCell {
-        let location = locations[indexPath.row]
-        cell.populationPlanetLabel.text = location.name
-        cell.typePlanetLabel.text = location.type
-        cell.populationPlanetLabel.text = "population: \(location.residents.count)"
-        return cell
+            cell.nameLocationLabel.text = locations[indexPath.row].name
+            cell.typeLocationLabel.text = locations[indexPath.row].type
+            cell.populationLocationLabel.text = "population: \(locations[indexPath.row].residents.count)"
+            cell.backgroundColor = .lightGray
+            if locations[indexPath.row].residents.count != 0 {
+                cell.accessoryType = .disclosureIndicator
+            } else {
+                cell.accessoryType = .none
+            }
+            return cell
         }
         return UITableViewCell()
     }

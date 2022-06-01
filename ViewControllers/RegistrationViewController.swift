@@ -94,7 +94,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
                         return
                     }
                 self?.storageManager.save(token: tokenResponse)
-//                self?.storageManager.saveToKeychain(tokenResponse.token)
                 self?.login()
             }
         }

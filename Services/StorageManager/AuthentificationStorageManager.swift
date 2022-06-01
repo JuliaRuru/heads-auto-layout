@@ -14,7 +14,6 @@ private struct Constants {
 
 protocol AuthentificationStorageManager {
     func save(token: TokenResponse)
-//    func saveUserIdToKeychain(_ string: String, key: StorageManager.StorageManagerKey)
 }
 
 extension StorageManager: AuthentificationStorageManager {
