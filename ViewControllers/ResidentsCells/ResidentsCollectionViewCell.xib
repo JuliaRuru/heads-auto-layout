@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRq-jL-5HN">
                         <rect key="frame" x="19" y="15.5" width="173" height="187"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rpo-QX-OgX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="rpo-QX-OgX">
                                 <rect key="frame" x="26" y="9" width="121" height="121"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -81,4 +81,7 @@
             <point key="canvasLocation" x="429.71014492753625" y="209.59821428571428"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="placeholderImage" width="121" height="107"/>
+    </resources>
 </document>

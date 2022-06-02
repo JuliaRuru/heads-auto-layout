@@ -23,6 +23,5 @@ class ResidentsCollectionViewCell: UICollectionViewCell {
         residentView.layer.borderColor = UIColor.darkGray.cgColor
         imageResidentImageView.layer.cornerRadius = 11
         imageResidentImageView.layer.masksToBounds = true
-        imageResidentImageView.alpha = 0.9
     }
 }

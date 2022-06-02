@@ -143,11 +143,11 @@
 		A32DB5EF28369E7300DDBD76 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A3B94AEF28493815008418D7 /* ImageService */,
 				A3C883C7284539BA001649F0 /* StorageManager */,
 				A3C883C62845397C001649F0 /* NetworkManager */,
 				A32DB5FF283969B600DDBD76 /* Response */,
 				A32DB60D283C004600DDBD76 /* ServiceLocator.swift */,
-				A359CF612847C53C0021BDCC /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -190,6 +190,23 @@
 				A359CF742847DE010021BDCC /* ResidentsCollectionViewCell.xib */,
 			);
 			path = ResidentsCells;
+			sourceTree = "<group>";
+		};
+		A3B94AEE284937D9008418D7 /* CustomUserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				A32DB611283CAE8D00DDBD76 /* AppSnackBar.swift */,
+				A3917E94280D67A2009168F0 /* FlickeringButton.swift */,
+			);
+			path = CustomUserInterface;
+			sourceTree = "<group>";
+		};
+		A3B94AEF28493815008418D7 /* ImageService */ = {
+			isa = PBXGroup;
+			children = (
+				A359CF612847C53C0021BDCC /* ImageService.swift */,
+			);
+			path = ImageService;
 			sourceTree = "<group>";
 		};
 		A3C883B328448A1D001649F0 /* LocationCells */ = {
@@ -236,6 +253,7 @@
 		A3CD15C527FC7A34007CC36E = {
 			isa = PBXGroup;
 			children = (
+				A3B94AEE284937D9008418D7 /* CustomUserInterface */,
 				A32DB61A2842A7E800DDBD76 /* ViewControllers */,
 				A32DB5EF28369E7300DDBD76 /* Services */,
 				A3CD15D027FC7A34007CC36E /* hnh1 */,
@@ -255,14 +273,12 @@
 		A3CD15D027FC7A34007CC36E /* hnh1 */ = {
 			isa = PBXGroup;
 			children = (
-				A3917E94280D67A2009168F0 /* FlickeringButton.swift */,
 				A3CD15D127FC7A34007CC36E /* AppDelegate.swift */,
 				A3CD15D327FC7A34007CC36E /* SceneDelegate.swift */,
 				A3CD15D727FC7A34007CC36E /* Main.storyboard */,
 				A3CD15DA27FC7A37007CC36E /* Assets.xcassets */,
 				A3CD15DC27FC7A37007CC36E /* LaunchScreen.storyboard */,
 				A3CD15DF27FC7A37007CC36E /* Info.plist */,
-				A32DB611283CAE8D00DDBD76 /* AppSnackBar.swift */,
 			);
 			path = hnh1;
 			sourceTree = "<group>";
