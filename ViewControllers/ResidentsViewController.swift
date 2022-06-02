@@ -22,8 +22,6 @@ class ResidentsViewController: UIViewController, UICollectionViewDelegateFlowLay
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        requestCharacterQueue.maxConcurrentOperationCount = 10
         collectionResidentsView.dataSource = self
         let nib = UINib(nibName: ResidentsCollectionViewCell.className, bundle: nil)
         collectionResidentsView.register(nib, forCellWithReuseIdentifier: ResidentsCollectionViewCell.className)

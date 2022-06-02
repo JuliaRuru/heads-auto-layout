@@ -13,14 +13,14 @@ private struct Constants {
 }
 
 protocol ProfileStorageManager {
-    func loadFromKeychain(key: StorageManager.StorageManagerKey) -> String?
+    func loadUserId() -> String?
 }
 
 extension StorageManager: ProfileStorageManager {
-     func loadFromKeychain(key: StorageManagerKey) -> String? {
+     func loadUserId() -> String? {
          let keychain = Keychain(service: Constants.serviceId)
          do {
-             let result = try keychain.get(key.rawValue)
+             let result = try keychain.get(StorageManagerKey.userId.rawValue)
              return result
          } catch {
              print(error as Any)

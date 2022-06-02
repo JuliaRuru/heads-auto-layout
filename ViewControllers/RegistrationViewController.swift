@@ -66,7 +66,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
                 }
                 if result == .free {
                     self?.registerProfile()
-                    
                 } else {
                 AppSnackBar.showMessageSnackBar(in: self?.view, message: result.representedValue)
                 self?.progressHUD.dismiss()

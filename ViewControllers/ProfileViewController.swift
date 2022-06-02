@@ -42,7 +42,7 @@ class ProfileViewController: UIViewController {
     }
     
     func loadProfile() {
-        let userId = storageManager.loadFromKeychain(key: .userId) ?? ""
+        let userId = storageManager.loadUserId() ?? ""
         networkManager.getProfile(profileId: userId) { [ weak self ] (profile, error) in
             if let error = error {
                 AppSnackBar.showMessageSnackBar(in: self?.view, message: error.localizedDescription)

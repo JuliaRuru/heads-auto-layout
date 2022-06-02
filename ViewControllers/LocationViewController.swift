@@ -53,8 +53,7 @@ class LocationViewController: UIViewController {
 
 extension LocationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = 58
-        return CGFloat(height)
+        return CGFloat(58)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
