@@ -31,7 +31,14 @@
 		A359CF4C28466D820021BDCC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF4B28466D820021BDCC /* LocationViewController.swift */; };
 		A359CF4F28466F6B0021BDCC /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF4D28466F6B0021BDCC /* LocationTableViewCell.swift */; };
 		A359CF5028466F6B0021BDCC /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A359CF4E28466F6B0021BDCC /* LocationTableViewCell.xib */; };
-		A359CF59284758360021BDCC /* ResidentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF58284758360021BDCC /* ResidentsViewController.swift */; };
+		A359CF5C28476D0E0021BDCC /* CharacterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF5B28476D0E0021BDCC /* CharacterNetworkManager.swift */; };
+		A359CF5E284771290021BDCC /* CharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF5D284771290021BDCC /* CharacterResponse.swift */; };
+		A359CF602847B31C0021BDCC /* ImageNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF5F2847B31C0021BDCC /* ImageNetworkManager.swift */; };
+		A359CF622847C53C0021BDCC /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF612847C53C0021BDCC /* ImageService.swift */; };
+		A359CF642847C9610021BDCC /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF632847C9610021BDCC /* Gender.swift */; };
+		A359CF6E2847DC000021BDCC /* ResidentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF6D2847DC000021BDCC /* ResidentsViewController.swift */; };
+		A359CF752847DE010021BDCC /* ResidentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359CF732847DE010021BDCC /* ResidentsCollectionViewCell.swift */; };
+		A359CF762847DE010021BDCC /* ResidentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A359CF742847DE010021BDCC /* ResidentsCollectionViewCell.xib */; };
 		A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3917E94280D67A2009168F0 /* FlickeringButton.swift */; };
 		A3C883B92844ACD2001649F0 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883B82844ACD2001649F0 /* InfoResponse.swift */; };
 		A3C883BB2844ACF8001649F0 /* ResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C883BA2844ACF8001649F0 /* ResultsResponse.swift */; };
@@ -73,7 +80,14 @@
 		A359CF4B28466D820021BDCC /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A359CF4D28466F6B0021BDCC /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		A359CF4E28466F6B0021BDCC /* LocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
-		A359CF58284758360021BDCC /* ResidentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentsViewController.swift; sourceTree = "<group>"; };
+		A359CF5B28476D0E0021BDCC /* CharacterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNetworkManager.swift; sourceTree = "<group>"; };
+		A359CF5D284771290021BDCC /* CharacterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponse.swift; sourceTree = "<group>"; };
+		A359CF5F2847B31C0021BDCC /* ImageNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworkManager.swift; sourceTree = "<group>"; };
+		A359CF612847C53C0021BDCC /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		A359CF632847C9610021BDCC /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		A359CF6D2847DC000021BDCC /* ResidentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentsViewController.swift; sourceTree = "<group>"; };
+		A359CF732847DE010021BDCC /* ResidentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A359CF742847DE010021BDCC /* ResidentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResidentsCollectionViewCell.xib; sourceTree = "<group>"; };
 		A3917E94280D67A2009168F0 /* FlickeringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringButton.swift; sourceTree = "<group>"; };
 		A3C883B82844ACD2001649F0 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
 		A3C883BA2844ACF8001649F0 /* ResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResponse.swift; sourceTree = "<group>"; };
@@ -133,6 +147,7 @@
 				A3C883C62845397C001649F0 /* NetworkManager */,
 				A32DB5FF283969B600DDBD76 /* Response */,
 				A32DB60D283C004600DDBD76 /* ServiceLocator.swift */,
+				A359CF612847C53C0021BDCC /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -147,6 +162,8 @@
 				A3C883B82844ACD2001649F0 /* InfoResponse.swift */,
 				A3C883BA2844ACF8001649F0 /* ResultsResponse.swift */,
 				A3C883BC2844B79A001649F0 /* LocationResponse.swift */,
+				A359CF5D284771290021BDCC /* CharacterResponse.swift */,
+				A359CF632847C9610021BDCC /* Gender.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -154,15 +171,25 @@
 		A32DB61A2842A7E800DDBD76 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A359CF5A284765230021BDCC /* ResidentsCells */,
 				A3C883B328448A1D001649F0 /* LocationCells */,
 				A32DB5E32832D18900DDBD76 /* profileCells */,
 				A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */,
 				A3DD9AF22808604A008BDB37 /* RegistrationViewController.swift */,
 				A309BDC4281AA35E0076BC31 /* ProfileViewController.swift */,
 				A359CF4B28466D820021BDCC /* LocationViewController.swift */,
-				A359CF58284758360021BDCC /* ResidentsViewController.swift */,
+				A359CF6D2847DC000021BDCC /* ResidentsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A359CF5A284765230021BDCC /* ResidentsCells */ = {
+			isa = PBXGroup;
+			children = (
+				A359CF732847DE010021BDCC /* ResidentsCollectionViewCell.swift */,
+				A359CF742847DE010021BDCC /* ResidentsCollectionViewCell.xib */,
+			);
+			path = ResidentsCells;
 			sourceTree = "<group>";
 		};
 		A3C883B328448A1D001649F0 /* LocationCells */ = {
@@ -182,6 +209,8 @@
 				A3C883C0284538E3001649F0 /* RegistrationNetworkManager.swift */,
 				A3C883BE2845384C001649F0 /* ProfileNetworkManager.swift */,
 				A3C883C42845395A001649F0 /* LocationNetworkManager.swift */,
+				A359CF5B28476D0E0021BDCC /* CharacterNetworkManager.swift */,
+				A359CF5F2847B31C0021BDCC /* ImageNetworkManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -308,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A359CF762847DE010021BDCC /* ResidentsCollectionViewCell.xib in Resources */,
 				A309BDE3281EEA800076BC31 /* ProfileColorTableViewCell.xib in Resources */,
 				A3CD15DE27FC7A37007CC36E /* LaunchScreen.storyboard in Resources */,
 				A359CF5028466F6B0021BDCC /* LocationTableViewCell.xib in Resources */,
@@ -329,16 +359,17 @@
 				A309BDC5281AA35E0076BC31 /* ProfileViewController.swift in Sources */,
 				A3C883C928453A8E001649F0 /* AuthentificationStorageManager.swift in Sources */,
 				A3C883CF28454518001649F0 /* UserDefaultsStorageManager.swift in Sources */,
+				A359CF5E284771290021BDCC /* CharacterResponse.swift in Sources */,
 				A359CF4F28466F6B0021BDCC /* LocationTableViewCell.swift in Sources */,
 				A309BDD6281EE0940076BC31 /* RegistrationDateTableViewCell.swift in Sources */,
 				A3CD15D627FC7A34007CC36E /* AuthentificationViewController.swift in Sources */,
 				A3917E95280D67A2009168F0 /* FlickeringButton.swift in Sources */,
-				A359CF59284758360021BDCC /* ResidentsViewController.swift in Sources */,
 				A32DB60528396F3000DDBD76 /* CheckUsername.swift in Sources */,
 				A3C883BB2844ACF8001649F0 /* ResultsResponse.swift in Sources */,
 				A3C883B92844ACD2001649F0 /* InfoResponse.swift in Sources */,
 				A3DD9AF32808604A008BDB37 /* RegistrationViewController.swift in Sources */,
 				A32DB607283972BD00DDBD76 /* TokenResponse.swift in Sources */,
+				A359CF5C28476D0E0021BDCC /* CharacterNetworkManager.swift in Sources */,
 				A309BDE2281EEA800076BC31 /* ProfileColorTableViewCell.swift in Sources */,
 				A359CF4C28466D820021BDCC /* LocationViewController.swift in Sources */,
 				A3C883C52845395A001649F0 /* LocationNetworkManager.swift in Sources */,
@@ -346,11 +377,16 @@
 				A32DB60328396DE900DDBD76 /* UsernameStatus.swift in Sources */,
 				A3CD15D227FC7A34007CC36E /* AppDelegate.swift in Sources */,
 				A3C883C328453939001649F0 /* AuthentificationNetworkManager.swift in Sources */,
+				A359CF6E2847DC000021BDCC /* ResidentsViewController.swift in Sources */,
+				A359CF642847C9610021BDCC /* Gender.swift in Sources */,
+				A359CF602847B31C0021BDCC /* ImageNetworkManager.swift in Sources */,
 				A3C883CB2845412D001649F0 /* ProfileStorageManager.swift in Sources */,
 				A3C883BF2845384C001649F0 /* ProfileNetworkManager.swift in Sources */,
+				A359CF752847DE010021BDCC /* ResidentsCollectionViewCell.swift in Sources */,
 				A309BDDD281EE71B0076BC31 /* UITableViewCell+NibName.swift in Sources */,
 				A309BDDF281EE7D80076BC31 /* NSObject+ClassName.swift in Sources */,
 				A3C883BD2844B79A001649F0 /* LocationResponse.swift in Sources */,
+				A359CF622847C53C0021BDCC /* ImageService.swift in Sources */,
 				A32DB5FE2839210200DDBD76 /* NetworkManager.swift in Sources */,
 				A32DB60E283C004600DDBD76 /* ServiceLocator.swift in Sources */,
 				A309BDE6281EEB000076BC31 /* UserPhotoTableViewCell.swift in Sources */,

@@ -12,6 +12,7 @@ class LocationTableViewCell: UITableViewCell {
     @IBOutlet weak var populationLocationLabel: UILabel!
     @IBOutlet weak var typeLocationLabel: UILabel!
     @IBOutlet weak var nameLocationLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -19,5 +20,4 @@ class LocationTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }

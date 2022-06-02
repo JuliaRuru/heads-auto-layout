@@ -41,4 +41,20 @@ struct ServiceLocator {
     LocationNetworkManager {
         NetworkManager()
     }
+    
+    static func characterNetworkManager() ->
+    CharacterNetworkManager {
+        NetworkManager()
+    }
+    
+    static func imageNetworkManager() ->
+    ImageNetworkManager {
+        NetworkManager()
+    }
+    
+    static let imageLoadingService = ImageService(networkManager: imageNetworkManager())
+
+    static func imageService() -> ImageLoadingService {
+        imageLoadingService
+    }
 }

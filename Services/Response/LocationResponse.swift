@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct LocationResponse: Decodable {
     let info: Info
     let results: [Results]

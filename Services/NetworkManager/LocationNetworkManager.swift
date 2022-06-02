@@ -10,6 +10,7 @@ import Alamofire
 
 protocol LocationNetworkManager {
     func getLocations(url: String, completion: ((LocationResponse?, Error?) -> ())?)
+//    func getCharacterList(url: String, completion: ((CharacterListResponse?, Error?) -> ())?)
 }
 
 extension NetworkManager: LocationNetworkManager {

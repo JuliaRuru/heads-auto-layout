@@ -41,4 +41,28 @@ class NetworkManager {
                 }
             }
     }
+    
+    func dataRequest (url: String,
+                      method: HTTPMethod,
+                      parameters: Parameters? = nil,
+                      headers: HTTPHeaders? = nil,
+                      onRequestCompleted: ((Data?, Error?) -> ())?
+    ) {
+        AF.request(url,
+                   method: method,
+                   parameters: parameters,
+                   encoding: JSONEncoding.default,
+                   headers: headers)
+            .validate()
+            .responseData { (afDataResponse) in
+                
+                guard let data = afDataResponse.data,
+                      afDataResponse.error == nil
+                else {
+                    onRequestCompleted?(nil, afDataResponse.error)
+                    return
+                }
+                onRequestCompleted?(data, nil)
+            }
+    }
 }
