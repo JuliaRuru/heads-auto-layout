@@ -72,8 +72,7 @@ extension LocationViewController: UITableViewDelegate {
         if let residentsViewController = storyboard.instantiateViewController(withIdentifier: "ResidentsViewController") as? ResidentsViewController {
             residentsViewController.title = "Жители локации \"\(locations[indexPath.row].name)\""
             residentsViewController.urlResidentList = locations[indexPath.row].residents
-            residentsViewController.modalPresentationStyle = .fullScreen
-            present(residentsViewController, animated: true)
+            navigationController?.pushViewController(residentsViewController, animated: true)
         }
     }
     
