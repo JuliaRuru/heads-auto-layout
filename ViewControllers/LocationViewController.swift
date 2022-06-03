@@ -22,7 +22,9 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        progressHUD.show(in: self.view)
         getLocationList(url: locationsUrl)
+        self.progressHUD.dismiss()
         locationTableView.delegate = self
         locationTableView.dataSource = self
         locationTableView.backgroundColor = .darkGray
@@ -33,14 +35,12 @@ class LocationViewController: UIViewController {
     }
     
     func getLocationList(url: String) {
-        progressHUD.show(in: self.view)
         networkManager.getLocations(url: url) { [ weak self ] (locationResponse, error) in
             if let error = error {
                 AppSnackBar.showMessageSnackBar(in: self?.view, message: error.localizedDescription)
                 self?.progressHUD.dismiss()
             }
             self?.info = locationResponse?.info
-            self?.progressHUD.dismiss()
             guard let locationResponse = locationResponse
             else {
                 return
