@@ -78,6 +78,7 @@ extension ResidentsViewController: UICollectionViewDataSource {
                     cell.genderResidentLabel.text = character.gender.rawValue
                     cell.speciesResidentLabel.text = character.species
                  }
+                 cell.progressHUD.dismiss()
                  DispatchQueue.global().async {
                      self.imageService.getImage(urlString: character.image) { (image) in
                         DispatchQueue.main.async {

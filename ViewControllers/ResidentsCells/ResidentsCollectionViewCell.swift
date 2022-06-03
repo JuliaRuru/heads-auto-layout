@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ResidentsCollectionViewCell: UICollectionViewCell {
     
@@ -14,9 +15,11 @@ class ResidentsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameResidentLabel: UILabel!
     @IBOutlet weak var genderResidentLabel: UILabel!
     @IBOutlet weak var speciesResidentLabel: UILabel!
+    let progressHUD = JGProgressHUD()
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        progressHUD.show(in: imageResidentImageView)
         residentView.layer.cornerRadius = 11
         residentView.layer.masksToBounds = true
         residentView.layer.borderWidth = 1
