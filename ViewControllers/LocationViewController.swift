@@ -24,7 +24,6 @@ class LocationViewController: UIViewController {
         
         progressHUD.show(in: self.view)
         getLocationList(url: locationsUrl)
-        self.progressHUD.dismiss()
         locationTableView.delegate = self
         locationTableView.dataSource = self
         locationTableView.backgroundColor = .darkGray
@@ -47,6 +46,7 @@ class LocationViewController: UIViewController {
             }
             self?.locations.append(contentsOf: locationResponse.results)
             self?.locationTableView.reloadData()
+            self?.progressHUD.dismiss()
         }
     }
 }
