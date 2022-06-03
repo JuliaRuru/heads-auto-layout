@@ -47,28 +47,21 @@ class ResidentsViewController: UIViewController, UICollectionViewDelegateFlowLay
     }()
 
     func requestCharacter(url: String, completion: @escaping (Character) -> ()) {
-        let group = DispatchGroup()
-        group.enter()
-        DispatchQueue.global().async {
-            self.networkManager.getCharacter(url: url) { [ weak self ] (character, error) in
-                if let error = error {
-                    AppSnackBar.showMessageSnackBar(in: self?.view, message: "\(error.localizedDescription)")
-                }
-                guard let character = character
-                else {
-                    return
-                }
-                DispatchQueue(label: "requestCharacterQueue").async {
-                    self?.characterList.append(character)
-                    completion(character)
-                    group.leave()
-                }
+        self.networkManager.getCharacter(url: url) { [ weak self ] (character, error) in
+            if let error = error {
+                AppSnackBar.showMessageSnackBar(in: self?.view, message: "\(error.localizedDescription)")
             }
+            guard let character = character
+            else {
+                return
+            }
+            self?.characterList.append(character)
+            completion(character)
         }
     }
- }
+}
 
- extension ResidentsViewController: UICollectionViewDataSource {
+extension ResidentsViewController: UICollectionViewDataSource {
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          urlResidentList.count
      }
