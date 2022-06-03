@@ -79,18 +79,21 @@ extension ProfileViewController: UITableViewDataSource {
             }
             let user = profile?.username
             cell.usernameLabel.text = user
+            cell.selectionStyle = .none
             return cell
         case 1:
             guard let cell = (tableView.dequeueReusableCell(withIdentifier: RegistrationDateTableViewCell.className) as? RegistrationDateTableViewCell)
             else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         case 2:
             guard let cell = (tableView.dequeueReusableCell(withIdentifier: ProfileColorTableViewCell.className) as? ProfileColorTableViewCell)
             else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         default: break
         }
