@@ -125,7 +125,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A32DB5E32832D18900DDBD76 /* profileCells */ = {
+		A32DB5E32832D18900DDBD76 /* ProfileCells */ = {
 			isa = PBXGroup;
 			children = (
 				A309BDDE281EE7D80076BC31 /* NSObject+ClassName.swift */,
@@ -137,7 +137,7 @@
 				A309BDE1281EEA800076BC31 /* ProfileColorTableViewCell.xib */,
 				A309BDE0281EEA800076BC31 /* ProfileColorTableViewCell.swift */,
 			);
-			path = profileCells;
+			path = ProfileCells;
 			sourceTree = "<group>";
 		};
 		A32DB5EF28369E7300DDBD76 /* Services */ = {
@@ -173,7 +173,7 @@
 			children = (
 				A359CF5A284765230021BDCC /* ResidentsCells */,
 				A3C883B328448A1D001649F0 /* LocationCells */,
-				A32DB5E32832D18900DDBD76 /* profileCells */,
+				A32DB5E32832D18900DDBD76 /* ProfileCells */,
 				A3CD15D527FC7A34007CC36E /* AuthentificationViewController.swift */,
 				A3DD9AF22808604A008BDB37 /* RegistrationViewController.swift */,
 				A309BDC4281AA35E0076BC31 /* ProfileViewController.swift */,
