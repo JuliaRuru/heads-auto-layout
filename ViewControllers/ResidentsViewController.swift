@@ -32,11 +32,11 @@ class ResidentsViewController: UIViewController, UICollectionViewDelegateFlowLay
     let compositionalLayout: UICollectionViewCompositionalLayout = {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .absolute(187))
+            heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .absolute(187))
+            heightDimension: .estimated(187))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitem: item,
                                                        count: 2)
