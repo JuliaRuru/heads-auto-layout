@@ -6,20 +6,24 @@
 //  CustomButton1.swift
 
 import UIKit
+import JGProgressHUD
 
 class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+    
+    let networkManager = ServiceLocator.registrationNetworkManager()
+    let storageManager = ServiceLocator.authentificationStorageManager()
+    let progressHUD = JGProgressHUD()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        progressHUD.textLabel.text = "Loading"
         let tap = UITapGestureRecognizer (target: self, action: #selector (endEditing))
         view.addGestureRecognizer(tap)
         loginTextField.delegate = self
         passwordTextField.delegate = self
         passwordConfirmTextField.delegate = self
         registrationScrollView.delegate = self
-        
-        let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
         
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21.0)]
@@ -39,12 +43,60 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     @IBOutlet weak var passwordConfirmTextField: UITextField!
     @IBOutlet weak var doneButton: FlickeringButton!
     @IBOutlet weak var registrationScrollView: UIScrollView!
+    @IBAction func checkForRegistration(_ sender: Any) {
+        view.endEditing(true)
+        if loginTextField.text == "" || passwordTextField.text == "" || passwordConfirmTextField.text == "" {
+            AppSnackBar.showMessageSnackBar(in: self.view, message: "Необходимо заполнить все поля")
+            self.progressHUD.dismiss()
+        }
+        else if passwordTextField.text != passwordConfirmTextField.text {
+            AppSnackBar.showMessageSnackBar(in: self.view, message: "Пароли не совпадают")
+            self.progressHUD.dismiss()
+        } else {
+            progressHUD.show(in: self.view)
+            networkManager.checkUsername(username: loginTextField.text ?? "") { [ weak self ] (Response, error) in
+                if let error = error {
+                    AppSnackBar.showMessageSnackBar(in: self?.view, message: error.localizedDescription)
+                self?.progressHUD.dismiss()
+                return
+                }
+                guard let result = Response?.result
+                else {
+                    self?.progressHUD.dismiss()
+                    return
+                }
+                if result == .free {
+                    self?.registerProfile()
+                } else {
+                AppSnackBar.showMessageSnackBar(in: self?.view, message: result.representedValue)
+                self?.progressHUD.dismiss()
+                }
+            }
+        }
+    }
     
-    @IBAction func doneButtonClick(_ sender: Any) {
+    func login() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         tabBarController.modalPresentationStyle = .fullScreen
-        show(tabBarController, sender: self)
+        present(tabBarController, animated: true)
+    }
+
+    func registerProfile() {
+        networkManager.registration(username: loginTextField.text ?? "", password: passwordTextField.text ?? "") { [ weak self ] tokenResponse, error in
+            self?.progressHUD.dismiss()
+            if let error = error?.localizedDescription {
+                AppSnackBar.showMessageSnackBar(in: self?.view, message: error)
+            } else {
+                guard let tokenResponse = tokenResponse
+                    else {
+                        AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка регистрации")
+                        return
+                    }
+                self?.storageManager.save(token: tokenResponse)
+                self?.login()
+            }
+        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

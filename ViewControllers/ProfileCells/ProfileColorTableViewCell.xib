@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="56" id="KGk-i7-Jjw" customClass="ProfileColorTableViewCell" customModule="hnh1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="242" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="242" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3dx-ug-wux">
+                        <rect key="frame" x="16" y="0.0" width="210" height="58"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет профиля" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDt-4A-SSr">
+                                <rect key="frame" x="0.0" y="0.0" width="183" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTK-6Y-WD8">
+                                <rect key="frame" x="188" y="18" width="22" height="22"/>
+                                <color key="backgroundColor" red="0.49173295500000003" green="0.53320777419999998" blue="0.91800000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="yI9-St-Ju0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BDt-4A-SSr" secondAttribute="bottom" id="Mi4-aL-O5M"/>
+                            <constraint firstItem="BDt-4A-SSr" firstAttribute="top" secondItem="3dx-ug-wux" secondAttribute="top" id="Nyi-RT-FQb"/>
+                            <constraint firstAttribute="bottom" secondItem="XTK-6Y-WD8" secondAttribute="bottom" constant="18" id="ZpE-Hg-Fl8"/>
+                            <constraint firstItem="XTK-6Y-WD8" firstAttribute="top" secondItem="3dx-ug-wux" secondAttribute="top" constant="18" id="cVJ-HM-rpQ"/>
+                            <constraint firstAttribute="trailing" secondItem="XTK-6Y-WD8" secondAttribute="trailing" id="juw-9i-8v0"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="3dx-ug-wux" secondAttribute="trailing" constant="16" id="0Te-hG-vpf"/>
+                    <constraint firstItem="3dx-ug-wux" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8Mp-i2-uix"/>
+                    <constraint firstAttribute="bottom" secondItem="3dx-ug-wux" secondAttribute="bottom" id="V0J-R6-htN"/>
+                    <constraint firstItem="3dx-ug-wux" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tJY-Qx-ceD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="squareTextLabel" destination="XTK-6Y-WD8" id="4bg-kq-Ngm"/>
+            </connections>
+            <point key="canvasLocation" x="84.057971014492765" y="119.86607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+    let networkManager = ServiceLocator.authentificationNetworkManager()
+    let storageManager = ServiceLocator.authentificationStorageManager()
+    let progressHUD = JGProgressHUD()
     
     @IBOutlet weak var authLabel: UILabel!
     @IBOutlet weak var authTextLabel: UILabel!
@@ -15,26 +19,41 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var authStackView: UIStackView!
     @IBOutlet weak var authScrollView: UIScrollView!
-    @IBOutlet weak var registrateButton: FlickeringButton!
-    @IBOutlet weak var enterButton: FlickeringButton!
-    
-    @IBAction func enterButtonClick(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
-        tabBarController.modalPresentationStyle = .fullScreen
-        show(tabBarController, sender: self)
+    @IBAction func checkForLogin() {
+        view.endEditing(true)
+        if loginTextField.text == "" || passwordTextField.text == "" {
+            AppSnackBar.showMessageSnackBar(in: self.view, message: "Необходимо заполнить все поля")
+            self.progressHUD.dismiss()
+        } else {
+            progressHUD.show(in: self.view)
+            networkManager.аuthentification(username: loginTextField.text ?? "", password: passwordTextField.text ?? "") { [ weak self ] (tokenResponse, error) in
+                self?.progressHUD.dismiss()
+                if let _ = error {
+                    AppSnackBar.showMessageSnackBar(in: self?.view, message: "Неверный логин или пароль")
+                } else {
+                    guard let tokenResponse = tokenResponse
+                        else {
+                            AppSnackBar.showMessageSnackBar(in: self?.view, message: "Ошибка авторизации")
+                            return
+                        }
+                    self?.storageManager.save(token: tokenResponse)
+                    self?.login()
+                }
+            }
+        }
     }
-
-    @IBAction func registerButtonClick(_ sender: Any) {
+    
+    @IBAction func goToRegistration() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let registrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
         registrationViewController.modalPresentationStyle = .fullScreen
-        show(registrationViewController, sender: self)
+        present(registrationViewController, animated: true)
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        progressHUD.textLabel.text = "Loading"
         loginTextField.delegate = self
         passwordTextField.delegate = self
         authScrollView.delegate = self
@@ -53,6 +72,13 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
         
         authStackView.setCustomSpacing(26, after: authLabel)
         authStackView.setCustomSpacing(76, after: authTextLabel)
+    }
+    
+    func login() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        tabBarController.modalPresentationStyle = .fullScreen
+        present(tabBarController, animated: true)
     }
     
     func leftStep(_ textField: UITextField) {

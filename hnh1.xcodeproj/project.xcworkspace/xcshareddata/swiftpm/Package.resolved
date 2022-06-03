@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": "master",
+          "revision": "53a24e871675e389c0d18bdd29e4944ef25f0654",
+          "version": null
+        }
+      },
+      {
+        "package": "JGProgressHUD",
+        "repositoryURL": "https://github.com/JonasGessner/JGProgressHUD.git",
+        "state": {
+          "branch": "master",
+          "revision": "103d67f308b8c0c18926061025549af98cdfd6fc",
+          "version": null
+        }
+      },
+      {
+        "package": "KeychainAccess",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess",
+        "state": {
+          "branch": "master",
+          "revision": "6299daec1d74be12164fec090faf9ed14d0da9d6",
+          "version": null
+        }
+      },
+      {
+        "package": "SnackBar",
+        "repositoryURL": "https://github.com/ahmedAlmasri/SnackBar.swift",
+        "state": {
+          "branch": "master",
+          "revision": "9efa0f9d2a6ae35384a878a0d74dbafd5001a672",
+          "version": null
+        }
+      },
+      {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
+        "state": {
+          "branch": null,
+          "revision": "f222cbdf325885926566172f6f5f06af95473158",
+          "version": "5.6.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
