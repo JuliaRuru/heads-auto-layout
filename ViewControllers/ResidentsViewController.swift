@@ -31,18 +31,22 @@ class ResidentsViewController: UIViewController, UICollectionViewDelegateFlowLay
 
     let compositionalLayout: UICollectionViewCompositionalLayout = {
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .absolute(173),
+            widthDimension: .fractionalWidth(1),
             heightDimension: .absolute(187))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: .absolute(187))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                       subitem: item,
+                                                       count: 2)
         group.interItemSpacing = .fixed(20)
-        let spacing: CGFloat = 24
         let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: 28,
+                                      leading: 24,
+                                      bottom: 28,
+                                      trailing: 24)
         section.interGroupSpacing = 28
-        section.contentInsets = NSDirectionalEdgeInsets(top: 28, leading: 24, bottom: 28, trailing: 24)
         return UICollectionViewCompositionalLayout(section: section)
     }()
 
