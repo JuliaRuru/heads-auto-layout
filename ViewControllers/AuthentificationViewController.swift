@@ -20,6 +20,7 @@ class AuthentificationViewController: UIViewController, UITextFieldDelegate, UIS
     @IBOutlet weak var authStackView: UIStackView!
     @IBOutlet weak var authScrollView: UIScrollView!
     @IBAction func checkForLogin() {
+        view.endEditing(true)
         if loginTextField.text == "" || passwordTextField.text == "" {
             AppSnackBar.showMessageSnackBar(in: self.view, message: "Необходимо заполнить все поля")
             self.progressHUD.dismiss()

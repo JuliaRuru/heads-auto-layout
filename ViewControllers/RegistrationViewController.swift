@@ -44,6 +44,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UIScrol
     @IBOutlet weak var doneButton: FlickeringButton!
     @IBOutlet weak var registrationScrollView: UIScrollView!
     @IBAction func checkForRegistration(_ sender: Any) {
+        view.endEditing(true)
         if loginTextField.text == "" || passwordTextField.text == "" || passwordConfirmTextField.text == "" {
             AppSnackBar.showMessageSnackBar(in: self.view, message: "Необходимо заполнить все поля")
             self.progressHUD.dismiss()
