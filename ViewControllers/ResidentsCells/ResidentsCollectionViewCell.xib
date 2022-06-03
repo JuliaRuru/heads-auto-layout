@@ -10,25 +10,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ResidentCell" id="gTV-IL-0wX" customClass="ResidentsCollectionViewCell" customModule="hnh1" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="211" height="218"/>
+            <rect key="frame" x="0.0" y="0.0" width="173" height="187"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="211" height="218"/>
+                <rect key="frame" x="0.0" y="0.0" width="173" height="187"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRq-jL-5HN">
-                        <rect key="frame" x="19" y="15.5" width="173" height="187"/>
+                        <rect key="frame" x="0.0" y="0.0" width="173" height="187"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="rpo-QX-OgX">
-                                <rect key="frame" x="26" y="9" width="121" height="121"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="rpo-QX-OgX">
+                                <rect key="frame" x="26" y="9" width="121" height="119"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="a5o-D4-5FX"/>
-                                    <constraint firstAttribute="height" constant="121" id="x7p-hD-Hp4"/>
-                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OUQ-hi-X5r">
-                                <rect key="frame" x="0.0" y="135" width="173" height="45"/>
+                                <rect key="frame" x="0.0" y="133" width="173" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvP-z7-fhp">
                                         <rect key="frame" x="0.0" y="0.0" width="173" height="18"/>
@@ -43,7 +39,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkQ-Jh-mOu">
-                                        <rect key="frame" x="0.0" y="32.5" width="173" height="12.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="173" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -54,12 +50,12 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OUQ-hi-X5r" firstAttribute="leading" secondItem="DRq-jL-5HN" secondAttribute="leading" id="AT0-l2-3wd"/>
+                            <constraint firstItem="rpo-QX-OgX" firstAttribute="centerX" secondItem="DRq-jL-5HN" secondAttribute="centerX" id="Egm-Fx-6Ku"/>
                             <constraint firstAttribute="bottom" secondItem="OUQ-hi-X5r" secondAttribute="bottom" constant="7" id="JSm-QX-S81"/>
                             <constraint firstItem="rpo-QX-OgX" firstAttribute="top" secondItem="DRq-jL-5HN" secondAttribute="top" constant="9" id="LUq-8Y-dK4"/>
+                            <constraint firstItem="rpo-QX-OgX" firstAttribute="centerY" secondItem="DRq-jL-5HN" secondAttribute="centerY" constant="-25" id="M4p-YP-54r"/>
                             <constraint firstItem="OUQ-hi-X5r" firstAttribute="top" secondItem="rpo-QX-OgX" secondAttribute="bottom" constant="5" id="VKF-Wy-zfS"/>
-                            <constraint firstAttribute="width" constant="173" id="aTG-zb-pfx"/>
-                            <constraint firstItem="rpo-QX-OgX" firstAttribute="leading" secondItem="DRq-jL-5HN" secondAttribute="leading" constant="26" id="f5Q-yz-dhV"/>
-                            <constraint firstAttribute="height" constant="187" id="p4P-0Z-jkS"/>
+                            <constraint firstItem="rpo-QX-OgX" firstAttribute="leading" secondItem="DRq-jL-5HN" secondAttribute="leading" constant="26" id="inE-YQ-rfm"/>
                             <constraint firstAttribute="trailing" secondItem="OUQ-hi-X5r" secondAttribute="trailing" id="rcf-oJ-h95"/>
                         </constraints>
                     </view>
@@ -68,9 +64,13 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="DRq-jL-5HN" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="2Uf-wv-tx9"/>
+                <constraint firstItem="DRq-jL-5HN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="73e-SN-uIB"/>
                 <constraint firstItem="DRq-jL-5HN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XU5-yG-xxN"/>
+                <constraint firstAttribute="trailing" secondItem="DRq-jL-5HN" secondAttribute="trailing" id="aKw-7r-pF6"/>
+                <constraint firstAttribute="bottom" secondItem="DRq-jL-5HN" secondAttribute="bottom" id="hjb-lP-57a"/>
+                <constraint firstItem="DRq-jL-5HN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vWE-1E-q5z"/>
             </constraints>
-            <size key="customSize" width="211" height="218"/>
+            <size key="customSize" width="173" height="187"/>
             <connections>
                 <outlet property="genderResidentLabel" destination="y77-Lw-buj" id="wM8-ZJ-fQY"/>
                 <outlet property="imageResidentImageView" destination="rpo-QX-OgX" id="eAf-bb-Uka"/>
@@ -78,7 +78,7 @@
                 <outlet property="residentView" destination="DRq-jL-5HN" id="ocm-c6-Hr5"/>
                 <outlet property="speciesResidentLabel" destination="hkQ-Jh-mOu" id="yJC-bn-BB6"/>
             </connections>
-            <point key="canvasLocation" x="429.71014492753625" y="209.59821428571428"/>
+            <point key="canvasLocation" x="300.72463768115944" y="148.99553571428569"/>
         </collectionViewCell>
     </objects>
     <resources>
