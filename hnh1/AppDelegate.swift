@@ -11,10 +11,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let userDefaultsStorageManager = ServiceLocator.userDefaultsStorageManager()
-        if !userDefaultsStorageManager.userDefaultsBool(key: .notFirstLaunch) {
-            userDefaultsStorageManager.cleanKeychain()
-            userDefaultsStorageManager.saveToUserDefaults(bool: true, key: .notFirstLaunch)
+        let appDelegatStorageManager = ServiceLocator.appDelegatStorageManager()
+        if !appDelegatStorageManager.hasFirstLaunch() {
+            appDelegatStorageManager.cleanKeychain()
+            appDelegatStorageManager.setHasFirstLaunch()
         }
         // Override point for customization after application launch.
         return true

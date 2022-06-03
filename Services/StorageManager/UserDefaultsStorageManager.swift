@@ -12,19 +12,19 @@ private struct Constants {
     static let serviceId = "StorageManagerKeychain.Service.Id"
 }
 
-protocol UserDefaultsStorageManager {
-    func saveToUserDefaults(bool: Bool, key: StorageManager.StorageManagerKey)
-    func userDefaultsBool(key: StorageManager.StorageManagerKey) -> Bool
+protocol AppDelegatStorageManager {
+    func setHasFirstLaunch()
+    func hasFirstLaunch() -> Bool
     func cleanKeychain()
 }
 
-extension StorageManager: UserDefaultsStorageManager {
-    func saveToUserDefaults(bool: Bool, key: StorageManagerKey) {
-        UserDefaults.standard.set(bool, forKey: key.rawValue)
+extension StorageManager: AppDelegatStorageManager {
+    func setHasFirstLaunch() {
+        UserDefaults.standard.set(true, forKey: StorageManagerKey.notFirstLaunch.rawValue)
     }
 
-    func userDefaultsBool(key: StorageManagerKey) -> Bool {
-        UserDefaults.standard.bool(forKey: key.rawValue)
+    func hasFirstLaunch() -> Bool {
+        UserDefaults.standard.bool(forKey: StorageManagerKey.notFirstLaunch.rawValue)
     }
     
     func cleanKeychain() {

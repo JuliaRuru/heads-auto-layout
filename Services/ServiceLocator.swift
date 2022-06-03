@@ -32,8 +32,8 @@ struct ServiceLocator {
         StorageManager()
     }
     
-    static func userDefaultsStorageManager() ->
-    UserDefaultsStorageManager {
+    static func appDelegatStorageManager() ->
+    AppDelegatStorageManager {
         StorageManager()
     }
     
