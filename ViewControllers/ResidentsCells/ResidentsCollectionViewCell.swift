@@ -16,6 +16,7 @@ class ResidentsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var genderResidentLabel: UILabel!
     @IBOutlet weak var speciesResidentLabel: UILabel!
     let progressHUD = JGProgressHUD()
+    var id: String?
 
     override func awakeFromNib() {
         super.awakeFromNib()
