@@ -223,22 +223,6 @@
             </objects>
             <point key="canvasLocation" x="677" y="11"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="arX-Kd-0vN">
-            <objects>
-                <navigationController storyboardIdentifier="NavigationController" id="iaj-1J-Huc" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l0A-yb-KqG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="hsW-ua-heD" kind="relationship" relationship="rootViewController" id="myO-7Y-tco"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="77m-hE-BwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1522" y="743"/>
-        </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -402,7 +386,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gzx-3o-taR">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HNe-Le-I1W">
                                     <size key="itemSize" width="128" height="128"/>
@@ -429,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFL-hm-JiS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2351" y="743"/>
+            <point key="canvasLocation" x="1487" y="743"/>
         </scene>
         <!--Выбор планеты-->
         <scene sceneID="zRz-OR-1xC">
