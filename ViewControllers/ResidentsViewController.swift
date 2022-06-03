@@ -72,21 +72,23 @@ extension ResidentsViewController: UICollectionViewDataSource {
 
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResidentsCollectionViewCell.className, for: indexPath) as? ResidentsCollectionViewCell {
+             cell.characterId = urlResidentList[indexPath.row]
+             cell.progressHUD.show(in: cell.imageResidentImageView, animated: true)
              requestCharacter(url: urlResidentList[indexPath.row]) { character in
-                 cell.id = character.image
-                 if cell.id == character.image {
+                 if cell.characterId == self.urlResidentList[indexPath.row] {
                      DispatchQueue.main.async {
                         cell.nameResidentLabel.text = character.name
                         cell.genderResidentLabel.text = character.gender.rawValue
                         cell.speciesResidentLabel.text = character.species
                      }
-                     cell.progressHUD.dismiss()
-                     DispatchQueue.global().async {
-                         self.imageService.getImage(urlString: character.image) { (image) in
-                            DispatchQueue.main.async {
-                                cell.imageResidentImageView.image = image
-                                cell.imageResidentImageView.alpha = 1
-                            }
+                     cell.imageId = character.image
+                     self.imageService.getImage(urlString: character.image) { (image) in
+                         if cell.imageId == character.image {
+                             DispatchQueue.main.async {
+                                 cell.imageResidentImageView.image = image
+                                 cell.imageResidentImageView.alpha = 1
+                                 cell.progressHUD.dismiss()
+                             }
                          }
                      }
                  }
